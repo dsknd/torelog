@@ -77,7 +77,7 @@ erDiagram
         bigint id PK
         bigint user_id FK
         varchar name
-        text description
+        text description "nullable"
         timestamp created_at
         timestamp updated_at
     }
@@ -85,7 +85,7 @@ erDiagram
     exercises {
         bigint id PK
         varchar name
-        text description
+        text description "nullable"
         timestamp created_at
         timestamp updated_at
     }
@@ -93,7 +93,7 @@ erDiagram
     muscle_group_categories {
         bigint id PK
         varchar name
-        text description
+        text description "nullable"
         timestamp created_at
         timestamp updated_at
     }
@@ -102,7 +102,7 @@ erDiagram
         bigint id PK
         bigint muscle_group_category_id FK
         varchar name
-        text description
+        text description "nullable"
         timestamp created_at
         timestamp updated_at
     }
@@ -136,7 +136,7 @@ erDiagram
         bigint user_id FK
         bigint training_menu_id FK "nullable"
         date date
-        text memo
+        text memo "nullable"
         timestamp created_at
         timestamp updated_at
     }
@@ -145,7 +145,7 @@ erDiagram
         bigint id PK
         varchar name
         varchar symbol
-        decimal conversion_rate
+        decimal conversion_rate "10,4"
         timestamp created_at
         timestamp updated_at
     }
@@ -156,9 +156,9 @@ erDiagram
         bigint exercise_id FK
         bigint weight_unit_id FK
         int set_number
-        decimal weight
+        decimal weight "8,2"
         int reps
-        text memo
+        text memo "nullable"
         timestamp created_at
         timestamp updated_at
     }
