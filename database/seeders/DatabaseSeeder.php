@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+            WeightUnitSeeder::class,
+            MuscleGroupCategorySeeder::class,
+            MuscleSeeder::class,
+            ExerciseSeeder::class,
+        ]);
+
         // User::factory(10)->create();
 
         User::factory()->create([
