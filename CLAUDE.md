@@ -95,6 +95,10 @@ composer run dev
   - Command（書き込み）とQuery（読み取り）を分離
   - PostgreSQL対応の検索機能
   - ServiceProviderでDIコンテナ設定
+- ✅ DDDのValue Object実装完了
+  - Weight, Reps, SetNumber, TrainingDate
+  - Laravel Castクラスでモデル統合
+  - ビジネスルール強制と型安全性向上
 - ⬜ UseCase層未実装
 - ⬜ APIエンドポイント未実装
 - ⬜ テスト未実装
