@@ -16,7 +16,7 @@ class TrainingRecord extends Model
     ];
 
     protected $casts = [
-        'date' => 'date',
+        'date' => \App\Casts\TrainingDateCast::class,
     ];
 
     public function user(): BelongsTo

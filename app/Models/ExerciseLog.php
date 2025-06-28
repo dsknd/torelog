@@ -18,9 +18,9 @@ class ExerciseLog extends Model
     ];
 
     protected $casts = [
-        'weight' => 'decimal:2',
-        'set_number' => 'integer',
-        'reps' => 'integer',
+        'weight' => \App\Casts\WeightCast::class,
+        'set_number' => \App\Casts\SetNumberCast::class,
+        'reps' => \App\Casts\RepsCast::class,
     ];
 
     public function trainingRecord(): BelongsTo
