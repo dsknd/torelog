@@ -89,9 +89,14 @@ composer run dev
   - 重量単位マスター追加
   - 筋肉グループカテゴリ・筋肉マスター追加
   - エクササイズと筋肉の関係テーブル追加
-- ✅ Eloquentモデル作成済み（ただし、リレーションなどは未実装）
+- ✅ Eloquentモデル作成済み（リレーション含む）
+- ✅ CQRS + Repository層実装完了
+  - User, Exercise, TrainingMenu, TrainingRecord用のRepository
+  - Command（書き込み）とQuery（読み取り）を分離
+  - PostgreSQL対応の検索機能
+  - ServiceProviderでDIコンテナ設定
+- ⬜ UseCase層未実装
 - ⬜ APIエンドポイント未実装
-- ⬜ ビジネスロジック未実装
 - ⬜ テスト未実装
 
 ## ビジネスルール
@@ -132,9 +137,14 @@ composer run dev
 - 全てのArtisanコマンドは`./vendor/bin/sail artisan`を使用する
 
 ## 今後の実装予定
-1. モデルのリレーション定義
-2. Repository層の実装
-3. UseCase層の実装
-4. APIエンドポイントの実装
-5. 認証・認可の実装
-6. テストの実装
+1. UseCase層の実装
+   - トレーニング記録作成UseCase
+   - エクササイズ検索UseCase
+   - トレーニングメニュー管理UseCase
+2. APIエンドポイントの実装
+   - RESTful API設計
+   - リクエスト/レスポンス定義
+3. 認証・認可の実装
+4. テストの実装
+   - Unit Test (Repository, UseCase)
+   - Feature Test (API)
