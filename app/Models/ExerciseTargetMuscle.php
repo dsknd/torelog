@@ -5,23 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class TrainingMenuExercise extends Model
+class ExerciseTargetMuscle extends Model
 {
-    public $timestamps = false;
-
     protected $fillable = [
-        'training_menu_id',
         'exercise_id',
-        'order',
+        'muscle_id',
+        'is_primary',
     ];
 
-    public function trainingMenu(): BelongsTo
-    {
-        return $this->belongsTo(TrainingMenu::class);
-    }
+    protected $casts = [
+        'is_primary' => 'boolean',
+    ];
 
     public function exercise(): BelongsTo
     {
         return $this->belongsTo(Exercise::class);
+    }
+
+    public function muscle(): BelongsTo
+    {
+        return $this->belongsTo(Muscle::class);
     }
 }
