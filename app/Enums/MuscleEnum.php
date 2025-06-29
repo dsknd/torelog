@@ -14,6 +14,9 @@ enum MuscleEnum: string
     case TRAPEZIUS = 'trapezius';
     case RHOMBOIDS = 'rhomboids';
     case ERECTOR_SPINAE = 'erector_spinae';
+    case TERES_MAJOR = 'teres_major';
+    case TERES_MINOR = 'teres_minor';
+    case INFRASPINATUS = 'infraspinatus';
 
     // 脚
     case QUADRICEPS = 'quadriceps';
@@ -41,6 +44,9 @@ enum MuscleEnum: string
             self::TRAPEZIUS => 'Trapezius',
             self::RHOMBOIDS => 'Rhomboids',
             self::ERECTOR_SPINAE => 'Erector Spinae',
+            self::TERES_MAJOR => 'Teres Major',
+            self::TERES_MINOR => 'Teres Minor',
+            self::INFRASPINATUS => 'Infraspinatus',
             self::QUADRICEPS => 'Quadriceps',
             self::HAMSTRINGS => 'Hamstrings',
             self::GLUTES => 'Glutes',
@@ -64,6 +70,9 @@ enum MuscleEnum: string
             self::TRAPEZIUS => '僧帽筋 - 首と肩の筋肉',
             self::RHOMBOIDS => '菱形筋 - 肩甲骨の筋肉',
             self::ERECTOR_SPINAE => '脊柱起立筋 - 背骨を支える筋肉',
+            self::TERES_MAJOR => '大円筋 - 肩甲骨から上腕への筋肉',
+            self::TERES_MINOR => '小円筋 - 肩の回旋筋群の一つ',
+            self::INFRASPINATUS => '棘下筋 - 肩の回旋筋群の一つ',
             self::QUADRICEPS => '大腿四頭筋 - 太ももの前面筋肉',
             self::HAMSTRINGS => 'ハムストリング - 太ももの後面筋肉',
             self::GLUTES => '臀筋 - お尻の筋肉',
@@ -81,7 +90,8 @@ enum MuscleEnum: string
     {
         return match($this) {
             self::PECTORALIS_MAJOR, self::PECTORALIS_MINOR, self::SERRATUS_ANTERIOR => MuscleGroupCategoryEnum::CHEST,
-            self::LATISSIMUS_DORSI, self::TRAPEZIUS, self::RHOMBOIDS, self::ERECTOR_SPINAE => MuscleGroupCategoryEnum::BACK,
+            self::LATISSIMUS_DORSI, self::TRAPEZIUS, self::RHOMBOIDS, self::ERECTOR_SPINAE,
+            self::TERES_MAJOR, self::TERES_MINOR, self::INFRASPINATUS => MuscleGroupCategoryEnum::BACK,
             self::QUADRICEPS, self::HAMSTRINGS, self::GLUTES, self::CALVES => MuscleGroupCategoryEnum::LEGS,
             self::ANTERIOR_DELTOID, self::LATERAL_DELTOID, self::POSTERIOR_DELTOID => MuscleGroupCategoryEnum::SHOULDERS,
             self::RECTUS_ABDOMINIS, self::OBLIQUES, self::TRANSVERSE_ABDOMINIS => MuscleGroupCategoryEnum::ABS,

@@ -30,9 +30,30 @@ enum ExerciseEnum: string
 
     // 背中
     case PULL_UPS = 'pull_ups';
+    case CHIN_UPS = 'chin_ups';
+    case WIDE_GRIP_PULL_UPS = 'wide_grip_pull_ups';
+    case NEUTRAL_GRIP_PULL_UPS = 'neutral_grip_pull_ups';
+    case ASSISTED_PULL_UPS = 'assisted_pull_ups';
+    case INVERTED_ROWS = 'inverted_rows';
     case LAT_PULLDOWN = 'lat_pulldown';
+    case WIDE_GRIP_LAT_PULLDOWN = 'wide_grip_lat_pulldown';
+    case CLOSE_GRIP_LAT_PULLDOWN = 'close_grip_lat_pulldown';
+    case SEATED_CABLE_ROW = 'seated_cable_row';
+    case FACE_PULLS = 'face_pulls';
+    case CABLE_REVERSE_FLY = 'cable_reverse_fly';
+    case STRAIGHT_ARM_PULLDOWN = 'straight_arm_pulldown';
+    case REVERSE_GRIP_PULLDOWN = 'reverse_grip_pulldown';
     case BARBELL_ROW = 'barbell_row';
+    case BENT_OVER_BARBELL_ROW = 'bent_over_barbell_row';
+    case UNDERHAND_BARBELL_ROW = 'underhand_barbell_row';
+    case T_BAR_ROW = 't_bar_row';
+    case PENDLAY_ROW = 'pendlay_row';
     case DUMBBELL_ROW = 'dumbbell_row';
+    case SINGLE_ARM_DUMBBELL_ROW = 'single_arm_dumbbell_row';
+    case CHEST_SUPPORTED_DUMBBELL_ROW = 'chest_supported_dumbbell_row';
+    case INCLINE_DUMBBELL_ROW = 'incline_dumbbell_row';
+    case DUMBBELL_REVERSE_FLY = 'dumbbell_reverse_fly';
+    case DUMBBELL_DEADLIFT = 'dumbbell_deadlift';
     case DEADLIFT = 'deadlift';
 
     // 肩
@@ -88,9 +109,30 @@ enum ExerciseEnum: string
             self::CHEST_FLY => 'チェストフライ',
             
             self::PULL_UPS => '懸垂',
+            self::CHIN_UPS => 'チンアップ',
+            self::WIDE_GRIP_PULL_UPS => 'ワイドグリップ懸垂',
+            self::NEUTRAL_GRIP_PULL_UPS => 'ニュートラルグリップ懸垂',
+            self::ASSISTED_PULL_UPS => 'アシスト懸垂',
+            self::INVERTED_ROWS => 'インバーテッドロー',
             self::LAT_PULLDOWN => 'ラットプルダウン',
+            self::WIDE_GRIP_LAT_PULLDOWN => 'ワイドグリップラットプルダウン',
+            self::CLOSE_GRIP_LAT_PULLDOWN => 'クローズグリップラットプルダウン',
+            self::SEATED_CABLE_ROW => 'シーテッドケーブルロー',
+            self::FACE_PULLS => 'フェイスプル',
+            self::CABLE_REVERSE_FLY => 'ケーブルリバースフライ',
+            self::STRAIGHT_ARM_PULLDOWN => 'ストレートアームプルダウン',
+            self::REVERSE_GRIP_PULLDOWN => 'リバースグリップラットプルダウン',
             self::BARBELL_ROW => 'バーベルロー',
+            self::BENT_OVER_BARBELL_ROW => 'ベントオーバーバーベルロー',
+            self::UNDERHAND_BARBELL_ROW => 'アンダーハンドバーベルロー',
+            self::T_BAR_ROW => 'Tバーロー',
+            self::PENDLAY_ROW => 'ペンドレイロー',
             self::DUMBBELL_ROW => 'ダンベルロー',
+            self::SINGLE_ARM_DUMBBELL_ROW => 'ワンアームダンベルロー',
+            self::CHEST_SUPPORTED_DUMBBELL_ROW => 'チェストサポートダンベルロー',
+            self::INCLINE_DUMBBELL_ROW => 'インクラインダンベルロー',
+            self::DUMBBELL_REVERSE_FLY => 'ダンベルリバースフライ',
+            self::DUMBBELL_DEADLIFT => 'ダンベルデッドリフト',
             self::DEADLIFT => 'デッドリフト',
             
             self::OVERHEAD_PRESS => 'オーバーヘッドプレス',
@@ -144,9 +186,30 @@ enum ExerciseEnum: string
             self::CHEST_FLY => '胸筋の分離を重視したトレーニング',
             
             self::PULL_UPS => '上半身の引く力を鍛える自重トレーニング',
+            self::CHIN_UPS => '手のひらを手前に向けて行う懸垂',
+            self::WIDE_GRIP_PULL_UPS => '広い手幅で行う広背筋重視の懸垂',
+            self::NEUTRAL_GRIP_PULL_UPS => 'パラレルグリップで行う懸垂',
+            self::ASSISTED_PULL_UPS => 'マシンの補助を使った懸垂',
+            self::INVERTED_ROWS => '体を斜めにして行う自重ロー',
             self::LAT_PULLDOWN => 'マシンを使った背中のトレーニング',
+            self::WIDE_GRIP_LAT_PULLDOWN => '広い手幅で行うラットプルダウン',
+            self::CLOSE_GRIP_LAT_PULLDOWN => '狭い手幅で行うラットプルダウン',
+            self::SEATED_CABLE_ROW => '座って行うケーブルロー',
+            self::FACE_PULLS => '顔に向けて引くケーブル種目',
+            self::CABLE_REVERSE_FLY => 'ケーブルを使ったリバースフライ',
+            self::STRAIGHT_ARM_PULLDOWN => '腕を伸ばして行うプルダウン',
+            self::REVERSE_GRIP_PULLDOWN => '逆手で行うラットプルダウン',
             self::BARBELL_ROW => 'バーベルを使った背中のトレーニング',
+            self::BENT_OVER_BARBELL_ROW => '前傾姿勢で行うバーベルロー',
+            self::UNDERHAND_BARBELL_ROW => 'アンダーグリップで行うバーベルロー',
+            self::T_BAR_ROW => 'Tバーを使った背中のロー種目',
+            self::PENDLAY_ROW => '床から引き上げるバーベルロー',
             self::DUMBBELL_ROW => 'ダンベルを使った背中のトレーニング',
+            self::SINGLE_ARM_DUMBBELL_ROW => '片腕ずつ行うダンベルロー',
+            self::CHEST_SUPPORTED_DUMBBELL_ROW => '胸をサポートして行うダンベルロー',
+            self::INCLINE_DUMBBELL_ROW => 'インクラインベンチで行うダンベルロー',
+            self::DUMBBELL_REVERSE_FLY => 'ダンベルを使ったリバースフライ',
+            self::DUMBBELL_DEADLIFT => 'ダンベルを使ったデッドリフト',
             self::DEADLIFT => '全身を使った代表的なコンパウンド種目',
             
             self::OVERHEAD_PRESS => '肩全体を鍛える基本種目',
@@ -187,8 +250,31 @@ enum ExerciseEnum: string
             self::DIPS => [MuscleEnum::PECTORALIS_MAJOR], // 下部胸筋と上腕三頭筋
             self::DUMBBELL_PULLOVER => [MuscleEnum::PECTORALIS_MAJOR, MuscleEnum::LATISSIMUS_DORSI],
             
-            self::PULL_UPS, self::LAT_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
-            self::BARBELL_ROW, self::DUMBBELL_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
+            // 背中 - 懸垂系（自重）
+            self::PULL_UPS, self::WIDE_GRIP_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
+            self::CHIN_UPS => [MuscleEnum::LATISSIMUS_DORSI], // 上腕二頭筋も関与するが現在未定義
+            self::NEUTRAL_GRIP_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
+            self::ASSISTED_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
+            self::INVERTED_ROWS => [MuscleEnum::RHOMBOIDS, MuscleEnum::LATISSIMUS_DORSI],
+            
+            // 背中 - マシン・ケーブル系
+            self::LAT_PULLDOWN, self::WIDE_GRIP_LAT_PULLDOWN, self::CLOSE_GRIP_LAT_PULLDOWN,
+            self::REVERSE_GRIP_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
+            self::SEATED_CABLE_ROW => [MuscleEnum::RHOMBOIDS, MuscleEnum::LATISSIMUS_DORSI],
+            self::FACE_PULLS => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
+            self::CABLE_REVERSE_FLY => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
+            self::STRAIGHT_ARM_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
+            
+            // 背中 - バーベル系
+            self::BARBELL_ROW, self::BENT_OVER_BARBELL_ROW, self::UNDERHAND_BARBELL_ROW,
+            self::T_BAR_ROW, self::PENDLAY_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
+            
+            // 背中 - ダンベル系
+            self::DUMBBELL_ROW, self::SINGLE_ARM_DUMBBELL_ROW, self::CHEST_SUPPORTED_DUMBBELL_ROW,
+            self::INCLINE_DUMBBELL_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
+            self::DUMBBELL_REVERSE_FLY => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
+            self::DUMBBELL_DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::LATISSIMUS_DORSI],
+            
             self::DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::GLUTES, MuscleEnum::HAMSTRINGS],
             
             self::OVERHEAD_PRESS => [MuscleEnum::ANTERIOR_DELTOID],
