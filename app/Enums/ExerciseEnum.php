@@ -7,8 +7,25 @@ enum ExerciseEnum: string
     // 胸筋
     case BENCH_PRESS = 'bench_press';
     case INCLINE_BENCH_PRESS = 'incline_bench_press';
+    case DECLINE_BENCH_PRESS = 'decline_bench_press';
+    case CLOSE_GRIP_BENCH_PRESS = 'close_grip_bench_press';
     case DUMBBELL_PRESS = 'dumbbell_press';
+    case INCLINE_DUMBBELL_PRESS = 'incline_dumbbell_press';
+    case DECLINE_DUMBBELL_PRESS = 'decline_dumbbell_press';
+    case DUMBBELL_FLY = 'dumbbell_fly';
+    case INCLINE_DUMBBELL_FLY = 'incline_dumbbell_fly';
+    case DUMBBELL_PULLOVER = 'dumbbell_pullover';
+    case CHEST_PRESS_MACHINE = 'chest_press_machine';
+    case PEC_DECK_FLY = 'pec_deck_fly';
+    case CABLE_CROSSOVER = 'cable_crossover';
+    case CABLE_FLY_HIGH = 'cable_fly_high';
+    case CABLE_FLY_MID = 'cable_fly_mid';
+    case CABLE_FLY_LOW = 'cable_fly_low';
     case PUSH_UPS = 'push_ups';
+    case DIPS = 'dips';
+    case DIAMOND_PUSH_UPS = 'diamond_push_ups';
+    case WIDE_GRIP_PUSH_UPS = 'wide_grip_push_ups';
+    case DECLINE_PUSH_UPS = 'decline_push_ups';
     case CHEST_FLY = 'chest_fly';
 
     // 背中
@@ -49,8 +66,25 @@ enum ExerciseEnum: string
         return match($this) {
             self::BENCH_PRESS => 'ベンチプレス',
             self::INCLINE_BENCH_PRESS => 'インクラインベンチプレス',
+            self::DECLINE_BENCH_PRESS => 'デクラインベンチプレス',
+            self::CLOSE_GRIP_BENCH_PRESS => 'クローズグリップベンチプレス',
             self::DUMBBELL_PRESS => 'ダンベルプレス',
+            self::INCLINE_DUMBBELL_PRESS => 'インクラインダンベルプレス',
+            self::DECLINE_DUMBBELL_PRESS => 'デクラインダンベルプレス',
+            self::DUMBBELL_FLY => 'ダンベルフライ',
+            self::INCLINE_DUMBBELL_FLY => 'インクラインダンベルフライ',
+            self::DUMBBELL_PULLOVER => 'ダンベルプルオーバー',
+            self::CHEST_PRESS_MACHINE => 'チェストプレスマシン',
+            self::PEC_DECK_FLY => 'ペックデックフライ',
+            self::CABLE_CROSSOVER => 'ケーブルクロスオーバー',
+            self::CABLE_FLY_HIGH => 'ケーブルフライ（上部）',
+            self::CABLE_FLY_MID => 'ケーブルフライ（中部）',
+            self::CABLE_FLY_LOW => 'ケーブルフライ（下部）',
             self::PUSH_UPS => '腕立て伏せ',
+            self::DIPS => 'ディップス',
+            self::DIAMOND_PUSH_UPS => 'ダイヤモンドプッシュアップ',
+            self::WIDE_GRIP_PUSH_UPS => 'ワイドグリッププッシュアップ',
+            self::DECLINE_PUSH_UPS => 'デクラインプッシュアップ',
             self::CHEST_FLY => 'チェストフライ',
             
             self::PULL_UPS => '懸垂',
@@ -88,8 +122,25 @@ enum ExerciseEnum: string
         return match($this) {
             self::BENCH_PRESS => 'バーベルを使った基本的な胸筋トレーニング',
             self::INCLINE_BENCH_PRESS => '上部胸筋を重点的に鍛えるベンチプレス',
+            self::DECLINE_BENCH_PRESS => '下部胸筋を重点的に鍛えるベンチプレス',
+            self::CLOSE_GRIP_BENCH_PRESS => '狭い手幅で行う胸筋と上腕三頭筋のトレーニング',
             self::DUMBBELL_PRESS => 'ダンベルを使った胸筋トレーニング',
+            self::INCLINE_DUMBBELL_PRESS => '上部胸筋を鍛えるダンベルプレス',
+            self::DECLINE_DUMBBELL_PRESS => '下部胸筋を鍛えるダンベルプレス',
+            self::DUMBBELL_FLY => 'ダンベルを使った胸筋のストレッチ種目',
+            self::INCLINE_DUMBBELL_FLY => '上部胸筋をストレッチするフライ種目',
+            self::DUMBBELL_PULLOVER => '胸筋と広背筋を同時に鍛える種目',
+            self::CHEST_PRESS_MACHINE => 'マシンを使った安全な胸筋トレーニング',
+            self::PEC_DECK_FLY => '胸筋を集中的に鍛えるマシン種目',
+            self::CABLE_CROSSOVER => 'ケーブルを使った胸筋の収縮種目',
+            self::CABLE_FLY_HIGH => '上部胸筋を狙うケーブルフライ',
+            self::CABLE_FLY_MID => '中部胸筋を狙うケーブルフライ',
+            self::CABLE_FLY_LOW => '下部胸筋を狙うケーブルフライ',
             self::PUSH_UPS => '自重を使った胸筋トレーニング',
+            self::DIPS => '自重で胸筋下部と上腕三頭筋を鍛える',
+            self::DIAMOND_PUSH_UPS => '手を菱形にして行う胸筋内側のトレーニング',
+            self::WIDE_GRIP_PUSH_UPS => '広い手幅で行う胸筋外側のトレーニング',
+            self::DECLINE_PUSH_UPS => '足を高くして行う上部胸筋のトレーニング',
             self::CHEST_FLY => '胸筋の分離を重視したトレーニング',
             
             self::PULL_UPS => '上半身の引く力を鍛える自重トレーニング',
@@ -125,8 +176,16 @@ enum ExerciseEnum: string
     public function getPrimaryMuscles(): array
     {
         return match($this) {
-            self::BENCH_PRESS, self::INCLINE_BENCH_PRESS, 
-            self::DUMBBELL_PRESS, self::PUSH_UPS, self::CHEST_FLY => [MuscleEnum::PECTORALIS_MAJOR],
+            self::BENCH_PRESS, self::INCLINE_BENCH_PRESS, self::DECLINE_BENCH_PRESS,
+            self::DUMBBELL_PRESS, self::INCLINE_DUMBBELL_PRESS, self::DECLINE_DUMBBELL_PRESS,
+            self::DUMBBELL_FLY, self::INCLINE_DUMBBELL_FLY, self::CHEST_PRESS_MACHINE,
+            self::PEC_DECK_FLY, self::CABLE_CROSSOVER, self::CABLE_FLY_HIGH,
+            self::CABLE_FLY_MID, self::CABLE_FLY_LOW, self::PUSH_UPS,
+            self::WIDE_GRIP_PUSH_UPS, self::DECLINE_PUSH_UPS, self::CHEST_FLY => [MuscleEnum::PECTORALIS_MAJOR],
+            
+            self::CLOSE_GRIP_BENCH_PRESS, self::DIAMOND_PUSH_UPS => [MuscleEnum::PECTORALIS_MAJOR], // 上腕三頭筋も主働筋だが現在未定義
+            self::DIPS => [MuscleEnum::PECTORALIS_MAJOR], // 下部胸筋と上腕三頭筋
+            self::DUMBBELL_PULLOVER => [MuscleEnum::PECTORALIS_MAJOR, MuscleEnum::LATISSIMUS_DORSI],
             
             self::PULL_UPS, self::LAT_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
             self::BARBELL_ROW, self::DUMBBELL_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],

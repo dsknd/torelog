@@ -7,6 +7,7 @@ enum MuscleEnum: string
     // 胸
     case PECTORALIS_MAJOR = 'pectoralis_major';
     case PECTORALIS_MINOR = 'pectoralis_minor';
+    case SERRATUS_ANTERIOR = 'serratus_anterior';
 
     // 背中
     case LATISSIMUS_DORSI = 'latissimus_dorsi';
@@ -35,6 +36,7 @@ enum MuscleEnum: string
         return match($this) {
             self::PECTORALIS_MAJOR => 'Pectoralis Major',
             self::PECTORALIS_MINOR => 'Pectoralis Minor',
+            self::SERRATUS_ANTERIOR => 'Serratus Anterior',
             self::LATISSIMUS_DORSI => 'Latissimus Dorsi',
             self::TRAPEZIUS => 'Trapezius',
             self::RHOMBOIDS => 'Rhomboids',
@@ -57,6 +59,7 @@ enum MuscleEnum: string
         return match($this) {
             self::PECTORALIS_MAJOR => '大胸筋 - 胸部の主要な筋肉',
             self::PECTORALIS_MINOR => '小胸筋 - 胸部の深層筋',
+            self::SERRATUS_ANTERIOR => '前鋸筋 - 胸部側面の筋肉',
             self::LATISSIMUS_DORSI => '広背筋 - 背中の広い筋肉',
             self::TRAPEZIUS => '僧帽筋 - 首と肩の筋肉',
             self::RHOMBOIDS => '菱形筋 - 肩甲骨の筋肉',
@@ -77,7 +80,7 @@ enum MuscleEnum: string
     public function getMuscleGroupCategory(): MuscleGroupCategoryEnum
     {
         return match($this) {
-            self::PECTORALIS_MAJOR, self::PECTORALIS_MINOR => MuscleGroupCategoryEnum::CHEST,
+            self::PECTORALIS_MAJOR, self::PECTORALIS_MINOR, self::SERRATUS_ANTERIOR => MuscleGroupCategoryEnum::CHEST,
             self::LATISSIMUS_DORSI, self::TRAPEZIUS, self::RHOMBOIDS, self::ERECTOR_SPINAE => MuscleGroupCategoryEnum::BACK,
             self::QUADRICEPS, self::HAMSTRINGS, self::GLUTES, self::CALVES => MuscleGroupCategoryEnum::LEGS,
             self::ANTERIOR_DELTOID, self::LATERAL_DELTOID, self::POSTERIOR_DELTOID => MuscleGroupCategoryEnum::SHOULDERS,
