@@ -21,25 +21,14 @@ enum MuscleGroupCategoryEnum: string
         };
     }
 
-    public function getNameJa(): string
+    public function getDescription(): string
     {
         return match($this) {
-            self::CHEST => '胸',
-            self::BACK => '背中',
-            self::LEGS => '脚',
-            self::SHOULDERS => '肩',
-            self::ABS => '腹筋',
-        };
-    }
-
-    public function getOrder(): int
-    {
-        return match($this) {
-            self::CHEST => 1,
-            self::BACK => 2,
-            self::LEGS => 3,
-            self::SHOULDERS => 4,
-            self::ABS => 5,
+            self::CHEST => '胸部の筋肉群',
+            self::BACK => '背中の筋肉群',
+            self::LEGS => '脚部の筋肉群',
+            self::SHOULDERS => '肩部の筋肉群',
+            self::ABS => '腹部の筋肉群',
         };
     }
 
@@ -47,8 +36,7 @@ enum MuscleGroupCategoryEnum: string
     {
         return [
             'name' => $this->getName(),
-            'name_ja' => $this->getNameJa(),
-            'order' => $this->getOrder(),
+            'description' => $this->getDescription(),
         ];
     }
 

@@ -52,25 +52,25 @@ enum MuscleEnum: string
         };
     }
 
-    public function getNameJa(): string
+    public function getDescription(): string
     {
         return match($this) {
-            self::PECTORALIS_MAJOR => '大胸筋',
-            self::PECTORALIS_MINOR => '小胸筋',
-            self::LATISSIMUS_DORSI => '広背筋',
-            self::TRAPEZIUS => '僧帽筋',
-            self::RHOMBOIDS => '菱形筋',
-            self::ERECTOR_SPINAE => '脊柱起立筋',
-            self::QUADRICEPS => '大腿四頭筋',
-            self::HAMSTRINGS => 'ハムストリング',
-            self::GLUTES => '臀筋',
-            self::CALVES => 'ふくらはぎ',
-            self::ANTERIOR_DELTOID => '三角筋前部',
-            self::LATERAL_DELTOID => '三角筋中部',
-            self::POSTERIOR_DELTOID => '三角筋後部',
-            self::RECTUS_ABDOMINIS => '腹直筋',
-            self::OBLIQUES => '腹斜筋',
-            self::TRANSVERSE_ABDOMINIS => '腹横筋',
+            self::PECTORALIS_MAJOR => '大胸筋 - 胸部の主要な筋肉',
+            self::PECTORALIS_MINOR => '小胸筋 - 胸部の深層筋',
+            self::LATISSIMUS_DORSI => '広背筋 - 背中の広い筋肉',
+            self::TRAPEZIUS => '僧帽筋 - 首と肩の筋肉',
+            self::RHOMBOIDS => '菱形筋 - 肩甲骨の筋肉',
+            self::ERECTOR_SPINAE => '脊柱起立筋 - 背骨を支える筋肉',
+            self::QUADRICEPS => '大腿四頭筋 - 太ももの前面筋肉',
+            self::HAMSTRINGS => 'ハムストリング - 太ももの後面筋肉',
+            self::GLUTES => '臀筋 - お尻の筋肉',
+            self::CALVES => 'ふくらはぎ - 下腿の筋肉',
+            self::ANTERIOR_DELTOID => '三角筋前部 - 肩の前面筋肉',
+            self::LATERAL_DELTOID => '三角筋中部 - 肩の側面筋肉',
+            self::POSTERIOR_DELTOID => '三角筋後部 - 肩の後面筋肉',
+            self::RECTUS_ABDOMINIS => '腹直筋 - 腹部の中央筋肉',
+            self::OBLIQUES => '腹斜筋 - 腹部の側面筋肉',
+            self::TRANSVERSE_ABDOMINIS => '腹横筋 - 腹部の深層筋'
         };
     }
 
@@ -89,7 +89,7 @@ enum MuscleEnum: string
     {
         return [
             'name' => $this->getName(),
-            'name_ja' => $this->getNameJa(),
+            'description' => $this->getDescription(),
             'muscle_group_category' => $this->getMuscleGroupCategory()->value,
         ];
     }

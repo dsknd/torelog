@@ -126,29 +126,29 @@ enum ExerciseEnum: string
     {
         return match($this) {
             self::BENCH_PRESS, self::INCLINE_BENCH_PRESS, 
-            self::DUMBBELL_PRESS, self::PUSH_UPS, self::CHEST_FLY => [MuscleEnum::CHEST],
+            self::DUMBBELL_PRESS, self::PUSH_UPS, self::CHEST_FLY => [MuscleEnum::PECTORALIS_MAJOR],
             
-            self::PULL_UPS, self::LAT_PULLDOWN => [MuscleEnum::LATS],
-            self::BARBELL_ROW, self::DUMBBELL_ROW => [MuscleEnum::LATS, MuscleEnum::RHOMBOIDS],
-            self::DEADLIFT => [MuscleEnum::LOWER_BACK, MuscleEnum::GLUTES, MuscleEnum::HAMSTRINGS],
+            self::PULL_UPS, self::LAT_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
+            self::BARBELL_ROW, self::DUMBBELL_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
+            self::DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::GLUTES, MuscleEnum::HAMSTRINGS],
             
-            self::OVERHEAD_PRESS => [MuscleEnum::SHOULDERS],
-            self::LATERAL_RAISE => [MuscleEnum::SHOULDERS],
-            self::REAR_DELT_FLY => [MuscleEnum::REAR_DELTS],
-            self::UPRIGHT_ROW => [MuscleEnum::SHOULDERS, MuscleEnum::MIDDLE_TRAPS],
+            self::OVERHEAD_PRESS => [MuscleEnum::ANTERIOR_DELTOID],
+            self::LATERAL_RAISE => [MuscleEnum::LATERAL_DELTOID],
+            self::REAR_DELT_FLY => [MuscleEnum::POSTERIOR_DELTOID],
+            self::UPRIGHT_ROW => [MuscleEnum::LATERAL_DELTOID, MuscleEnum::TRAPEZIUS],
             
-            self::BICEP_CURL, self::HAMMER_CURL => [MuscleEnum::BICEPS],
-            self::TRICEP_DIPS, self::TRICEP_EXTENSION => [MuscleEnum::TRICEPS],
+            self::BICEP_CURL, self::HAMMER_CURL => [],  // 腕の筋肉は現在定義されていない
+            self::TRICEP_DIPS, self::TRICEP_EXTENSION => [],  // 腕の筋肉は現在定義されていない
             
             self::SQUAT, self::FRONT_SQUAT, self::LEG_PRESS => [MuscleEnum::QUADRICEPS, MuscleEnum::GLUTES],
             self::ROMANIAN_DEADLIFT => [MuscleEnum::HAMSTRINGS, MuscleEnum::GLUTES],
             self::LUNGES => [MuscleEnum::QUADRICEPS, MuscleEnum::GLUTES],
             self::CALF_RAISE => [MuscleEnum::CALVES],
             
-            self::PLANK => [MuscleEnum::ABS, MuscleEnum::LOWER_BACK],
-            self::CRUNCHES => [MuscleEnum::ABS],
+            self::PLANK => [MuscleEnum::RECTUS_ABDOMINIS, MuscleEnum::ERECTOR_SPINAE],
+            self::CRUNCHES => [MuscleEnum::RECTUS_ABDOMINIS],
             self::RUSSIAN_TWIST => [MuscleEnum::OBLIQUES],
-            self::MOUNTAIN_CLIMBER => [MuscleEnum::ABS, MuscleEnum::SHOULDERS],
+            self::MOUNTAIN_CLIMBER => [MuscleEnum::RECTUS_ABDOMINIS, MuscleEnum::ANTERIOR_DELTOID],
         };
     }
 
