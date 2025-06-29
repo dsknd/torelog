@@ -28,6 +28,8 @@ enum MuscleEnum: string
     case ANTERIOR_DELTOID = 'anterior_deltoid';
     case LATERAL_DELTOID = 'lateral_deltoid';
     case POSTERIOR_DELTOID = 'posterior_deltoid';
+    case SUPRASPINATUS = 'supraspinatus';
+    case SUBSCAPULARIS = 'subscapularis';
 
     // 腹筋
     case RECTUS_ABDOMINIS = 'rectus_abdominis';
@@ -54,6 +56,8 @@ enum MuscleEnum: string
             self::ANTERIOR_DELTOID => 'Anterior Deltoid',
             self::LATERAL_DELTOID => 'Lateral Deltoid',
             self::POSTERIOR_DELTOID => 'Posterior Deltoid',
+            self::SUPRASPINATUS => 'Supraspinatus',
+            self::SUBSCAPULARIS => 'Subscapularis',
             self::RECTUS_ABDOMINIS => 'Rectus Abdominis',
             self::OBLIQUES => 'Obliques',
             self::TRANSVERSE_ABDOMINIS => 'Transverse Abdominis',
@@ -80,6 +84,8 @@ enum MuscleEnum: string
             self::ANTERIOR_DELTOID => '三角筋前部 - 肩の前面筋肉',
             self::LATERAL_DELTOID => '三角筋中部 - 肩の側面筋肉',
             self::POSTERIOR_DELTOID => '三角筋後部 - 肩の後面筋肉',
+            self::SUPRASPINATUS => '棘上筋 - ローテーターカフの一つ',
+            self::SUBSCAPULARIS => '肩甲下筋 - ローテーターカフの一つ',
             self::RECTUS_ABDOMINIS => '腹直筋 - 腹部の中央筋肉',
             self::OBLIQUES => '腹斜筋 - 腹部の側面筋肉',
             self::TRANSVERSE_ABDOMINIS => '腹横筋 - 腹部の深層筋'
@@ -90,10 +96,11 @@ enum MuscleEnum: string
     {
         return match($this) {
             self::PECTORALIS_MAJOR, self::PECTORALIS_MINOR, self::SERRATUS_ANTERIOR => MuscleGroupCategoryEnum::CHEST,
-            self::LATISSIMUS_DORSI, self::TRAPEZIUS, self::RHOMBOIDS, self::ERECTOR_SPINAE,
+            self::LATISSIMUS_DORSI, self::RHOMBOIDS, self::ERECTOR_SPINAE,
             self::TERES_MAJOR, self::TERES_MINOR, self::INFRASPINATUS => MuscleGroupCategoryEnum::BACK,
             self::QUADRICEPS, self::HAMSTRINGS, self::GLUTES, self::CALVES => MuscleGroupCategoryEnum::LEGS,
-            self::ANTERIOR_DELTOID, self::LATERAL_DELTOID, self::POSTERIOR_DELTOID => MuscleGroupCategoryEnum::SHOULDERS,
+            self::ANTERIOR_DELTOID, self::LATERAL_DELTOID, self::POSTERIOR_DELTOID,
+            self::SUPRASPINATUS, self::SUBSCAPULARIS, self::TRAPEZIUS => MuscleGroupCategoryEnum::SHOULDERS,
             self::RECTUS_ABDOMINIS, self::OBLIQUES, self::TRANSVERSE_ABDOMINIS => MuscleGroupCategoryEnum::ABS,
         };
     }

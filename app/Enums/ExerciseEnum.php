@@ -58,8 +58,27 @@ enum ExerciseEnum: string
 
     // 肩
     case OVERHEAD_PRESS = 'overhead_press';
+    case MILITARY_PRESS = 'military_press';
+    case PUSH_PRESS = 'push_press';
+    case BEHIND_NECK_PRESS = 'behind_neck_press';
+    case BARBELL_UPRIGHT_ROW = 'barbell_upright_row';
+    case BARBELL_SHRUGS = 'barbell_shrugs';
+    case DUMBBELL_SHOULDER_PRESS = 'dumbbell_shoulder_press';
+    case DUMBBELL_ARNOLD_PRESS = 'dumbbell_arnold_press';
     case LATERAL_RAISE = 'lateral_raise';
+    case FRONT_RAISE = 'front_raise';
     case REAR_DELT_FLY = 'rear_delt_fly';
+    case DUMBBELL_UPRIGHT_ROW = 'dumbbell_upright_row';
+    case DUMBBELL_SHRUGS = 'dumbbell_shrugs';
+    case CABLE_LATERAL_RAISE = 'cable_lateral_raise';
+    case CABLE_FRONT_RAISE = 'cable_front_raise';
+    case CABLE_REAR_DELT_FLY = 'cable_rear_delt_fly';
+    case CABLE_UPRIGHT_ROW = 'cable_upright_row';
+    case SHOULDER_PRESS_MACHINE = 'shoulder_press_machine';
+    case LATERAL_RAISE_MACHINE = 'lateral_raise_machine';
+    case REVERSE_FLY_MACHINE = 'reverse_fly_machine';
+    case PIKE_PUSH_UPS = 'pike_push_ups';
+    case HANDSTAND_PUSH_UPS = 'handstand_push_ups';
     case UPRIGHT_ROW = 'upright_row';
 
     // 腕
@@ -136,8 +155,27 @@ enum ExerciseEnum: string
             self::DEADLIFT => 'デッドリフト',
             
             self::OVERHEAD_PRESS => 'オーバーヘッドプレス',
+            self::MILITARY_PRESS => 'ミリタリープレス',
+            self::PUSH_PRESS => 'プッシュプレス',
+            self::BEHIND_NECK_PRESS => 'ビハインドネックプレス',
+            self::BARBELL_UPRIGHT_ROW => 'バーベルアップライトロー',
+            self::BARBELL_SHRUGS => 'バーベルシュラッグ',
+            self::DUMBBELL_SHOULDER_PRESS => 'ダンベルショルダープレス',
+            self::DUMBBELL_ARNOLD_PRESS => 'ダンベルアーノルドプレス',
             self::LATERAL_RAISE => 'ラテラルレイズ',
+            self::FRONT_RAISE => 'フロントレイズ',
             self::REAR_DELT_FLY => 'リアデルトフライ',
+            self::DUMBBELL_UPRIGHT_ROW => 'ダンベルアップライトロー',
+            self::DUMBBELL_SHRUGS => 'ダンベルシュラッグ',
+            self::CABLE_LATERAL_RAISE => 'ケーブルラテラルレイズ',
+            self::CABLE_FRONT_RAISE => 'ケーブルフロントレイズ',
+            self::CABLE_REAR_DELT_FLY => 'ケーブルリアデルトフライ',
+            self::CABLE_UPRIGHT_ROW => 'ケーブルアップライトロー',
+            self::SHOULDER_PRESS_MACHINE => 'ショルダープレスマシン',
+            self::LATERAL_RAISE_MACHINE => 'ラテラルレイズマシン',
+            self::REVERSE_FLY_MACHINE => 'リバースフライマシン',
+            self::PIKE_PUSH_UPS => 'パイクプッシュアップ',
+            self::HANDSTAND_PUSH_UPS => '逆立ち腕立て伏せ',
             self::UPRIGHT_ROW => 'アップライトロー',
             
             self::BICEP_CURL => 'バイセップカール',
@@ -213,8 +251,27 @@ enum ExerciseEnum: string
             self::DEADLIFT => '全身を使った代表的なコンパウンド種目',
             
             self::OVERHEAD_PRESS => '肩全体を鍛える基本種目',
+            self::MILITARY_PRESS => '厳格なフォームで行うプレス種目',
+            self::PUSH_PRESS => '下半身の反動を使ったプレス種目',
+            self::BEHIND_NECK_PRESS => '首の後ろでバーを上げる肩種目',
+            self::BARBELL_UPRIGHT_ROW => 'バーベルを体に沿って引き上げる種目',
+            self::BARBELL_SHRUGS => 'バーベルで僧帽筋を鍛える種目',
+            self::DUMBBELL_SHOULDER_PRESS => 'ダンベルで行う肩プレス',
+            self::DUMBBELL_ARNOLD_PRESS => '回転動作を含むダンベルプレス',
             self::LATERAL_RAISE => '三角筋中部を集中的に鍛える種目',
+            self::FRONT_RAISE => '三角筋前部を集中的に鍛える種目',
             self::REAR_DELT_FLY => '三角筋後部を鍛える種目',
+            self::DUMBBELL_UPRIGHT_ROW => 'ダンベルで行うアップライトロー',
+            self::DUMBBELL_SHRUGS => 'ダンベルで僧帽筋を鍛える種目',
+            self::CABLE_LATERAL_RAISE => 'ケーブルで行うラテラルレイズ',
+            self::CABLE_FRONT_RAISE => 'ケーブルで行うフロントレイズ',
+            self::CABLE_REAR_DELT_FLY => 'ケーブルで行うリアデルトフライ',
+            self::CABLE_UPRIGHT_ROW => 'ケーブルで行うアップライトロー',
+            self::SHOULDER_PRESS_MACHINE => 'マシンで安全に行う肩プレス',
+            self::LATERAL_RAISE_MACHINE => 'マシンで行うラテラルレイズ',
+            self::REVERSE_FLY_MACHINE => 'マシンで行うリバースフライ',
+            self::PIKE_PUSH_UPS => '逆V字姿勢で行う肩の自重トレーニング',
+            self::HANDSTAND_PUSH_UPS => '逆立ち状態で行う高強度肩トレーニング',
             self::UPRIGHT_ROW => '肩と僧帽筋を鍛える種目',
             
             self::BICEP_CURL => '上腕二頭筋の基本種目',
@@ -277,10 +334,25 @@ enum ExerciseEnum: string
             
             self::DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::GLUTES, MuscleEnum::HAMSTRINGS],
             
-            self::OVERHEAD_PRESS => [MuscleEnum::ANTERIOR_DELTOID],
-            self::LATERAL_RAISE => [MuscleEnum::LATERAL_DELTOID],
-            self::REAR_DELT_FLY => [MuscleEnum::POSTERIOR_DELTOID],
-            self::UPRIGHT_ROW => [MuscleEnum::LATERAL_DELTOID, MuscleEnum::TRAPEZIUS],
+            // 肩 - プレス系
+            self::OVERHEAD_PRESS, self::MILITARY_PRESS, self::DUMBBELL_SHOULDER_PRESS,
+            self::SHOULDER_PRESS_MACHINE => [MuscleEnum::ANTERIOR_DELTOID],
+            self::PUSH_PRESS => [MuscleEnum::ANTERIOR_DELTOID], // 下半身も関与するがメインは肩
+            self::BEHIND_NECK_PRESS => [MuscleEnum::ANTERIOR_DELTOID], // 危険な種目だが一応
+            self::DUMBBELL_ARNOLD_PRESS => [MuscleEnum::ANTERIOR_DELTOID, MuscleEnum::LATERAL_DELTOID],
+            
+            // 肩 - レイズ系
+            self::LATERAL_RAISE, self::CABLE_LATERAL_RAISE, self::LATERAL_RAISE_MACHINE => [MuscleEnum::LATERAL_DELTOID],
+            self::FRONT_RAISE, self::CABLE_FRONT_RAISE => [MuscleEnum::ANTERIOR_DELTOID],
+            self::REAR_DELT_FLY, self::CABLE_REAR_DELT_FLY, self::REVERSE_FLY_MACHINE => [MuscleEnum::POSTERIOR_DELTOID],
+            
+            // 肩 - アップライトロー・シュラッグ系
+            self::UPRIGHT_ROW, self::BARBELL_UPRIGHT_ROW, self::DUMBBELL_UPRIGHT_ROW,
+            self::CABLE_UPRIGHT_ROW => [MuscleEnum::LATERAL_DELTOID, MuscleEnum::TRAPEZIUS],
+            self::BARBELL_SHRUGS, self::DUMBBELL_SHRUGS => [MuscleEnum::TRAPEZIUS],
+            
+            // 肩 - 自重系
+            self::PIKE_PUSH_UPS, self::HANDSTAND_PUSH_UPS => [MuscleEnum::ANTERIOR_DELTOID],
             
             self::BICEP_CURL, self::HAMMER_CURL => [],  // 腕の筋肉は現在定義されていない
             self::TRICEP_DIPS, self::TRICEP_EXTENSION => [],  // 腕の筋肉は現在定義されていない
