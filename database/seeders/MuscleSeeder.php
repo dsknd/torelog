@@ -22,6 +22,7 @@ class MuscleSeeder extends Seeder
                 ['name' => $muscle->getName()],
                 [
                     'name' => $muscle->getName(),
+                    'name_ja' => $muscle->getNameJa(),
                     'muscle_group_category_id' => $muscleGroupCategory->id,
                 ]
             );

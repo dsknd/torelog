@@ -4,31 +4,42 @@ namespace App\Enums;
 
 enum MuscleGroupCategoryEnum: string
 {
-    case UPPER_BODY = 'upper_body';
-    case LOWER_BODY = 'lower_body';
-    case CORE = 'core';
-    case FULL_BODY = 'full_body';
-    case CARDIO = 'cardio';
+    case CHEST = 'chest';
+    case BACK = 'back';
+    case LEGS = 'legs';
+    case SHOULDERS = 'shoulders';
+    case ABS = 'abs';
 
     public function getName(): string
     {
         return match($this) {
-            self::UPPER_BODY => '上半身',
-            self::LOWER_BODY => '下半身',
-            self::CORE => '体幹',
-            self::FULL_BODY => '全身',
-            self::CARDIO => '有酸素',
+            self::CHEST => 'Chest',
+            self::BACK => 'Back',
+            self::LEGS => 'Legs',
+            self::SHOULDERS => 'Shoulders',
+            self::ABS => 'Abs',
         };
     }
 
-    public function getDescription(): string
+    public function getNameJa(): string
     {
         return match($this) {
-            self::UPPER_BODY => '上半身の筋肉群',
-            self::LOWER_BODY => '下半身の筋肉群',
-            self::CORE => '体幹部の筋肉群',
-            self::FULL_BODY => '全身を使う運動',
-            self::CARDIO => '心肺機能向上運動',
+            self::CHEST => '胸',
+            self::BACK => '背中',
+            self::LEGS => '脚',
+            self::SHOULDERS => '肩',
+            self::ABS => '腹筋',
+        };
+    }
+
+    public function getOrder(): int
+    {
+        return match($this) {
+            self::CHEST => 1,
+            self::BACK => 2,
+            self::LEGS => 3,
+            self::SHOULDERS => 4,
+            self::ABS => 5,
         };
     }
 
@@ -36,7 +47,8 @@ enum MuscleGroupCategoryEnum: string
     {
         return [
             'name' => $this->getName(),
-            'description' => $this->getDescription(),
+            'name_ja' => $this->getNameJa(),
+            'order' => $this->getOrder(),
         ];
     }
 

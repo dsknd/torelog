@@ -15,36 +15,9 @@ class WeightUnitFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->randomElement(['キログラム', 'ポンド', 'グラム']),
-            'symbol' => $this->faker->randomElement(['kg', 'lb', 'g']),
-            'conversion_rate' => $this->faker->randomFloat(4, 0.001, 1.0),
+            'name' => fake()->word(),
+            'symbol' => fake()->lexify('??'),
+            'conversion_rate' => fake()->randomFloat(4, 0.001, 1.0),
         ];
-    }
-
-    public function kilogram(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'name' => 'キログラム',
-            'symbol' => 'kg',
-            'conversion_rate' => 1.0,
-        ]);
-    }
-
-    public function pound(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'name' => 'ポンド',
-            'symbol' => 'lb',
-            'conversion_rate' => 0.453592,
-        ]);
-    }
-
-    public function gram(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'name' => 'グラム',
-            'symbol' => 'g',
-            'conversion_rate' => 0.001,
-        ]);
     }
 }
