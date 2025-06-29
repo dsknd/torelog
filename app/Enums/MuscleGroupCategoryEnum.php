@@ -8,6 +8,7 @@ enum MuscleGroupCategoryEnum: string
     case BACK = 'back';
     case LEGS = 'legs';
     case SHOULDERS = 'shoulders';
+    case ARMS = 'arms';
     case ABS = 'abs';
 
     public function getName(): string
@@ -17,6 +18,7 @@ enum MuscleGroupCategoryEnum: string
             self::BACK => 'Back',
             self::LEGS => 'Legs',
             self::SHOULDERS => 'Shoulders',
+            self::ARMS => 'Arms',
             self::ABS => 'Abs',
         };
     }
@@ -28,6 +30,7 @@ enum MuscleGroupCategoryEnum: string
             self::BACK => '背中の筋肉群',
             self::LEGS => '脚部の筋肉群',
             self::SHOULDERS => '肩部の筋肉群',
+            self::ARMS => '腕部の筋肉群',
             self::ABS => '腹部の筋肉群',
         };
     }

@@ -31,6 +31,14 @@ enum MuscleEnum: string
     case SUPRASPINATUS = 'supraspinatus';
     case SUBSCAPULARIS = 'subscapularis';
 
+    // 腕
+    case BICEPS_BRACHII = 'biceps_brachii';
+    case BRACHIALIS = 'brachialis';
+    case BRACHIORADIALIS = 'brachioradialis';
+    case TRICEPS_BRACHII = 'triceps_brachii';
+    case FOREARM_FLEXORS = 'forearm_flexors';
+    case FOREARM_EXTENSORS = 'forearm_extensors';
+
     // 腹筋
     case RECTUS_ABDOMINIS = 'rectus_abdominis';
     case OBLIQUES = 'obliques';
@@ -58,6 +66,12 @@ enum MuscleEnum: string
             self::POSTERIOR_DELTOID => 'Posterior Deltoid',
             self::SUPRASPINATUS => 'Supraspinatus',
             self::SUBSCAPULARIS => 'Subscapularis',
+            self::BICEPS_BRACHII => 'Biceps Brachii',
+            self::BRACHIALIS => 'Brachialis',
+            self::BRACHIORADIALIS => 'Brachioradialis',
+            self::TRICEPS_BRACHII => 'Triceps Brachii',
+            self::FOREARM_FLEXORS => 'Forearm Flexors',
+            self::FOREARM_EXTENSORS => 'Forearm Extensors',
             self::RECTUS_ABDOMINIS => 'Rectus Abdominis',
             self::OBLIQUES => 'Obliques',
             self::TRANSVERSE_ABDOMINIS => 'Transverse Abdominis',
@@ -86,6 +100,12 @@ enum MuscleEnum: string
             self::POSTERIOR_DELTOID => '三角筋後部 - 肩の後面筋肉',
             self::SUPRASPINATUS => '棘上筋 - ローテーターカフの一つ',
             self::SUBSCAPULARIS => '肩甲下筋 - ローテーターカフの一つ',
+            self::BICEPS_BRACHII => '上腕二頭筋 - 上腕前面の主要筋肉',
+            self::BRACHIALIS => '上腕筋 - 肘関節屈曲の主働筋',
+            self::BRACHIORADIALIS => '腕橈骨筋 - 前腕の筋肉',
+            self::TRICEPS_BRACHII => '上腕三頭筋 - 上腕後面の主要筋肉',
+            self::FOREARM_FLEXORS => '前腕屈筋群 - 手首・指の屈曲筋',
+            self::FOREARM_EXTENSORS => '前腕伸筋群 - 手首・指の伸展筋',
             self::RECTUS_ABDOMINIS => '腹直筋 - 腹部の中央筋肉',
             self::OBLIQUES => '腹斜筋 - 腹部の側面筋肉',
             self::TRANSVERSE_ABDOMINIS => '腹横筋 - 腹部の深層筋'
@@ -101,6 +121,8 @@ enum MuscleEnum: string
             self::QUADRICEPS, self::HAMSTRINGS, self::GLUTES, self::CALVES => MuscleGroupCategoryEnum::LEGS,
             self::ANTERIOR_DELTOID, self::LATERAL_DELTOID, self::POSTERIOR_DELTOID,
             self::SUPRASPINATUS, self::SUBSCAPULARIS, self::TRAPEZIUS => MuscleGroupCategoryEnum::SHOULDERS,
+            self::BICEPS_BRACHII, self::BRACHIALIS, self::BRACHIORADIALIS,
+            self::TRICEPS_BRACHII, self::FOREARM_FLEXORS, self::FOREARM_EXTENSORS => MuscleGroupCategoryEnum::ARMS,
             self::RECTUS_ABDOMINIS, self::OBLIQUES, self::TRANSVERSE_ABDOMINIS => MuscleGroupCategoryEnum::ABS,
         };
     }

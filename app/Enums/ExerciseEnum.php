@@ -81,11 +81,42 @@ enum ExerciseEnum: string
     case HANDSTAND_PUSH_UPS = 'handstand_push_ups';
     case UPRIGHT_ROW = 'upright_row';
 
-    // 腕
+    // 腕 - 上腕二頭筋
     case BICEP_CURL = 'bicep_curl';
+    case BARBELL_CURL = 'barbell_curl';
+    case EZ_BAR_CURL = 'ez_bar_curl';
+    case DUMBBELL_CURL = 'dumbbell_curl';
     case HAMMER_CURL = 'hammer_curl';
+    case CONCENTRATION_CURL = 'concentration_curl';
+    case PREACHER_CURL = 'preacher_curl';
+    case INCLINE_DUMBBELL_CURL = 'incline_dumbbell_curl';
+    case CABLE_CURL = 'cable_curl';
+    case REVERSE_CURL = 'reverse_curl';
+    case ZOTTMAN_CURL = 'zottman_curl';
+    case SPIDER_CURL = 'spider_curl';
+    case ALTERNATING_DUMBBELL_CURL = 'alternating_dumbbell_curl';
+    
+    // 腕 - 上腕三頭筋
     case TRICEP_DIPS = 'tricep_dips';
     case TRICEP_EXTENSION = 'tricep_extension';
+    case CLOSE_GRIP_PUSH_UPS = 'close_grip_push_ups';
+    case OVERHEAD_TRICEP_EXTENSION = 'overhead_tricep_extension';
+    case LYING_TRICEP_EXTENSION = 'lying_tricep_extension';
+    case TRICEP_KICKBACK = 'tricep_kickback';
+    case DIAMOND_PUSH_UPS_TRICEP = 'diamond_push_ups_tricep';
+    case CABLE_TRICEP_PUSHDOWN = 'cable_tricep_pushdown';
+    case ROPE_TRICEP_PUSHDOWN = 'rope_tricep_pushdown';
+    case TRICEP_PRESS_MACHINE = 'tricep_press_machine';
+    case BENCH_DIPS = 'bench_dips';
+    case SKULL_CRUSHERS = 'skull_crushers';
+    
+    // 腕 - 前腕
+    case WRIST_CURL = 'wrist_curl';
+    case REVERSE_WRIST_CURL = 'reverse_wrist_curl';
+    case FARMER_WALK = 'farmer_walk';
+    case PLATE_PINCH = 'plate_pinch';
+    case WRIST_ROLLER = 'wrist_roller';
+    case FOREARM_PLANK = 'forearm_plank';
 
     // 脚
     case SQUAT = 'squat';
@@ -178,10 +209,42 @@ enum ExerciseEnum: string
             self::HANDSTAND_PUSH_UPS => '逆立ち腕立て伏せ',
             self::UPRIGHT_ROW => 'アップライトロー',
             
+            // 上腕二頭筋
             self::BICEP_CURL => 'バイセップカール',
+            self::BARBELL_CURL => 'バーベルカール',
+            self::EZ_BAR_CURL => 'EZバーカール',
+            self::DUMBBELL_CURL => 'ダンベルカール',
             self::HAMMER_CURL => 'ハンマーカール',
+            self::CONCENTRATION_CURL => 'コンセントレーションカール',
+            self::PREACHER_CURL => 'プリーチャーカール',
+            self::INCLINE_DUMBBELL_CURL => 'インクラインダンベルカール',
+            self::CABLE_CURL => 'ケーブルカール',
+            self::REVERSE_CURL => 'リバースカール',
+            self::ZOTTMAN_CURL => 'ゾットマンカール',
+            self::SPIDER_CURL => 'スパイダーカール',
+            self::ALTERNATING_DUMBBELL_CURL => 'オルタネイトダンベルカール',
+            
+            // 上腕三頭筋
             self::TRICEP_DIPS => 'トライセップディップス',
             self::TRICEP_EXTENSION => 'トライセップエクステンション',
+            self::CLOSE_GRIP_PUSH_UPS => 'クローズグリッププッシュアップ',
+            self::OVERHEAD_TRICEP_EXTENSION => 'オーバーヘッドトライセップエクステンション',
+            self::LYING_TRICEP_EXTENSION => 'ライイングトライセップエクステンション',
+            self::TRICEP_KICKBACK => 'トライセップキックバック',
+            self::DIAMOND_PUSH_UPS_TRICEP => 'ダイヤモンドプッシュアップ',
+            self::CABLE_TRICEP_PUSHDOWN => 'ケーブルトライセッププッシュダウン',
+            self::ROPE_TRICEP_PUSHDOWN => 'ロープトライセッププッシュダウン',
+            self::TRICEP_PRESS_MACHINE => 'トライセッププレスマシン',
+            self::BENCH_DIPS => 'ベンチディップス',
+            self::SKULL_CRUSHERS => 'スカルクラッシャー',
+            
+            // 前腕
+            self::WRIST_CURL => 'リストカール',
+            self::REVERSE_WRIST_CURL => 'リバースリストカール',
+            self::FARMER_WALK => 'ファーマーズウォーク',
+            self::PLATE_PINCH => 'プレートピンチ',
+            self::WRIST_ROLLER => 'リストローラー',
+            self::FOREARM_PLANK => 'フォアアームプランク',
             
             self::SQUAT => 'スクワット',
             self::FRONT_SQUAT => 'フロントスクワット',
@@ -274,10 +337,42 @@ enum ExerciseEnum: string
             self::HANDSTAND_PUSH_UPS => '逆立ち状態で行う高強度肩トレーニング',
             self::UPRIGHT_ROW => '肩と僧帽筋を鍛える種目',
             
+            // 上腕二頭筋
             self::BICEP_CURL => '上腕二頭筋の基本種目',
+            self::BARBELL_CURL => 'バーベルを使った上腕二頭筋トレーニング',
+            self::EZ_BAR_CURL => 'EZバーで手首への負担を軽減したカール',
+            self::DUMBBELL_CURL => 'ダンベルを使った上腕二頭筋トレーニング',
             self::HAMMER_CURL => '上腕二頭筋と前腕を鍛える種目',
+            self::CONCENTRATION_CURL => '座って肘を固定して行う集中的なカール',
+            self::PREACHER_CURL => 'プリーチャーベンチを使った厳格なカール',
+            self::INCLINE_DUMBBELL_CURL => 'インクラインベンチで行うダンベルカール',
+            self::CABLE_CURL => 'ケーブルを使った上腕二頭筋トレーニング',
+            self::REVERSE_CURL => '逆手で行い前腕も鍛えるカール',
+            self::ZOTTMAN_CURL => '上げと下げでグリップを変えるカール',
+            self::SPIDER_CURL => 'ベンチに胸を付けて行うカール',
+            self::ALTERNATING_DUMBBELL_CURL => '左右交互に行うダンベルカール',
+            
+            // 上腕三頭筋
             self::TRICEP_DIPS => '上腕三頭筋の自重トレーニング',
             self::TRICEP_EXTENSION => '上腕三頭筋の分離種目',
+            self::CLOSE_GRIP_PUSH_UPS => '狭い手幅で上腕三頭筋を重視した腕立て伏せ',
+            self::OVERHEAD_TRICEP_EXTENSION => '頭上で行う上腕三頭筋エクステンション',
+            self::LYING_TRICEP_EXTENSION => '仰向けで行う上腕三頭筋エクステンション',
+            self::TRICEP_KICKBACK => '後方に蹴り上げる上腕三頭筋種目',
+            self::DIAMOND_PUSH_UPS_TRICEP => 'ダイヤモンド型で上腕三頭筋重視の腕立て伏せ',
+            self::CABLE_TRICEP_PUSHDOWN => 'ケーブルで行う上腕三頭筋プッシュダウン',
+            self::ROPE_TRICEP_PUSHDOWN => 'ロープを使った上腕三頭筋プッシュダウン',
+            self::TRICEP_PRESS_MACHINE => 'マシンを使った上腕三頭筋トレーニング',
+            self::BENCH_DIPS => 'ベンチを使った上腕三頭筋ディップス',
+            self::SKULL_CRUSHERS => '額に向けて下ろす上腕三頭筋種目',
+            
+            // 前腕
+            self::WRIST_CURL => '手首の屈曲で前腕屈筋群を鍛える',
+            self::REVERSE_WRIST_CURL => '手首の伸展で前腕伸筋群を鍛える',
+            self::FARMER_WALK => '重いものを持って歩く握力・前腕トレーニング',
+            self::PLATE_PINCH => 'プレートを指で挟んで握力を鍛える',
+            self::WRIST_ROLLER => 'ローラーで前腕全体を鍛える',
+            self::FOREARM_PLANK => '前腕で支えるプランク',
             
             self::SQUAT => '下半身の王道トレーニング',
             self::FRONT_SQUAT => '大腿四頭筋を重点的に鍛えるスクワット',
@@ -354,8 +449,26 @@ enum ExerciseEnum: string
             // 肩 - 自重系
             self::PIKE_PUSH_UPS, self::HANDSTAND_PUSH_UPS => [MuscleEnum::ANTERIOR_DELTOID],
             
-            self::BICEP_CURL, self::HAMMER_CURL => [],  // 腕の筋肉は現在定義されていない
-            self::TRICEP_DIPS, self::TRICEP_EXTENSION => [],  // 腕の筋肉は現在定義されていない
+            // 腕 - 上腕二頭筋系
+            self::BICEP_CURL, self::BARBELL_CURL, self::EZ_BAR_CURL, self::DUMBBELL_CURL,
+            self::CONCENTRATION_CURL, self::PREACHER_CURL, self::INCLINE_DUMBBELL_CURL,
+            self::CABLE_CURL, self::SPIDER_CURL, self::ALTERNATING_DUMBBELL_CURL => [MuscleEnum::BICEPS_BRACHII],
+            self::HAMMER_CURL => [MuscleEnum::BICEPS_BRACHII, MuscleEnum::BRACHIALIS, MuscleEnum::BRACHIORADIALIS],
+            self::REVERSE_CURL => [MuscleEnum::BRACHIALIS, MuscleEnum::BRACHIORADIALIS],
+            self::ZOTTMAN_CURL => [MuscleEnum::BICEPS_BRACHII, MuscleEnum::BRACHIORADIALIS],
+            
+            // 腕 - 上腕三頭筋系
+            self::TRICEP_DIPS, self::TRICEP_EXTENSION, self::CLOSE_GRIP_PUSH_UPS,
+            self::OVERHEAD_TRICEP_EXTENSION, self::LYING_TRICEP_EXTENSION, self::TRICEP_KICKBACK,
+            self::DIAMOND_PUSH_UPS_TRICEP, self::CABLE_TRICEP_PUSHDOWN, self::ROPE_TRICEP_PUSHDOWN,
+            self::TRICEP_PRESS_MACHINE, self::BENCH_DIPS, self::SKULL_CRUSHERS => [MuscleEnum::TRICEPS_BRACHII],
+            
+            // 腕 - 前腕系
+            self::WRIST_CURL => [MuscleEnum::FOREARM_FLEXORS],
+            self::REVERSE_WRIST_CURL => [MuscleEnum::FOREARM_EXTENSORS],
+            self::FARMER_WALK, self::PLATE_PINCH => [MuscleEnum::FOREARM_FLEXORS, MuscleEnum::FOREARM_EXTENSORS],
+            self::WRIST_ROLLER => [MuscleEnum::FOREARM_FLEXORS, MuscleEnum::FOREARM_EXTENSORS],
+            self::FOREARM_PLANK => [MuscleEnum::FOREARM_FLEXORS],
             
             self::SQUAT, self::FRONT_SQUAT, self::LEG_PRESS => [MuscleEnum::QUADRICEPS, MuscleEnum::GLUTES],
             self::ROMANIAN_DEADLIFT => [MuscleEnum::HAMSTRINGS, MuscleEnum::GLUTES],
