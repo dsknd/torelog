@@ -33,7 +33,7 @@ readonly class SetNumber
         if ($this->value <= 1) {
             throw new InvalidArgumentException('Cannot create set number less than 1');
         }
-        
+
         return new self($this->value - 1);
     }
 

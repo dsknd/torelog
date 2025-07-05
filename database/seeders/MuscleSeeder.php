@@ -13,8 +13,8 @@ class MuscleSeeder extends Seeder
     {
         foreach (MuscleEnum::cases() as $muscle) {
             $muscleGroupCategory = MuscleGroupCategory::where('name', $muscle->getMuscleGroupCategory()->getName())->first();
-            
-            if (!$muscleGroupCategory) {
+
+            if (! $muscleGroupCategory) {
                 throw new \Exception("MuscleGroupCategory not found: {$muscle->getMuscleGroupCategory()->getName()}");
             }
 

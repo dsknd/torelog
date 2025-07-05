@@ -21,13 +21,13 @@ class WeightCast implements CastsAttributes
         }
 
         $weightUnitId = $attributes['weight_unit_id'] ?? null;
-        
+
         if ($weightUnitId === null) {
             throw new \InvalidArgumentException('weight_unit_id is required for Weight cast');
         }
 
         $weightUnit = WeightUnit::find($weightUnitId);
-        
+
         if ($weightUnit === null) {
             throw new \InvalidArgumentException("WeightUnit with id {$weightUnitId} not found");
         }
@@ -59,13 +59,13 @@ class WeightCast implements CastsAttributes
 
         if (is_array($value) && isset($value['value'], $value['unit_id'])) {
             $weightUnit = WeightUnit::find($value['unit_id']);
-            
+
             if ($weightUnit === null) {
                 throw new \InvalidArgumentException("WeightUnit with id {$value['unit_id']} not found");
             }
 
             $weight = new Weight($value['value'], $weightUnit);
-            
+
             return [
                 $key => $weight->getValue(),
                 'weight_unit_id' => $weight->getUnitId(),

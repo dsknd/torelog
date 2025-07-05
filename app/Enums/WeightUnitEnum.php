@@ -10,9 +10,9 @@ enum WeightUnitEnum: string
 
     public function getName(): string
     {
-        return match($this) {
+        return match ($this) {
             self::KILOGRAM => 'キログラム',
-            self::POUND => 'ポンド', 
+            self::POUND => 'ポンド',
             self::GRAM => 'グラム',
         };
     }
@@ -24,7 +24,7 @@ enum WeightUnitEnum: string
 
     public function getConversionRate(): float
     {
-        return match($this) {
+        return match ($this) {
             self::KILOGRAM => 1.0,
             self::POUND => 0.453592,
             self::GRAM => 0.001,

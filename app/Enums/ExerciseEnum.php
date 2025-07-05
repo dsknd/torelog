@@ -95,7 +95,7 @@ enum ExerciseEnum: string
     case ZOTTMAN_CURL = 'zottman_curl';
     case SPIDER_CURL = 'spider_curl';
     case ALTERNATING_DUMBBELL_CURL = 'alternating_dumbbell_curl';
-    
+
     // 腕 - 上腕三頭筋
     case TRICEP_DIPS = 'tricep_dips';
     case TRICEP_EXTENSION = 'tricep_extension';
@@ -109,7 +109,7 @@ enum ExerciseEnum: string
     case TRICEP_PRESS_MACHINE = 'tricep_press_machine';
     case BENCH_DIPS = 'bench_dips';
     case SKULL_CRUSHERS = 'skull_crushers';
-    
+
     // 腕 - 前腕
     case WRIST_CURL = 'wrist_curl';
     case REVERSE_WRIST_CURL = 'reverse_wrist_curl';
@@ -118,13 +118,83 @@ enum ExerciseEnum: string
     case WRIST_ROLLER = 'wrist_roller';
     case FOREARM_PLANK = 'forearm_plank';
 
-    // 脚
+    // 脚 - スクワット系
     case SQUAT = 'squat';
     case FRONT_SQUAT = 'front_squat';
+    case BACK_SQUAT = 'back_squat';
+    case GOBLET_SQUAT = 'goblet_squat';
+    case BULGARIAN_SPLIT_SQUAT = 'bulgarian_split_squat';
+    case PISTOL_SQUAT = 'pistol_squat';
+    case BOX_SQUAT = 'box_squat';
+    case JUMP_SQUAT = 'jump_squat';
+    case HACK_SQUAT = 'hack_squat';
+    case OVERHEAD_SQUAT = 'overhead_squat';
+    case ZERCHER_SQUAT = 'zercher_squat';
+    case SUMO_SQUAT = 'sumo_squat';
+    case PAUSE_SQUAT = 'pause_squat';
+    case SINGLE_LEG_SQUAT = 'single_leg_squat';
+    case WALL_SIT = 'wall_sit';
+
+    // 脚 - デッドリフト系
     case ROMANIAN_DEADLIFT = 'romanian_deadlift';
+    case STIFF_LEG_DEADLIFT = 'stiff_leg_deadlift';
+    case SUMO_DEADLIFT = 'sumo_deadlift';
+    case TRAP_BAR_DEADLIFT = 'trap_bar_deadlift';
+    case SINGLE_LEG_DEADLIFT = 'single_leg_deadlift';
+    case DEFICIT_DEADLIFT = 'deficit_deadlift';
+    case RACK_PULLS = 'rack_pulls';
+    case GOOD_MORNING = 'good_morning';
+    case NORDIC_CURL = 'nordic_curl';
+
+    // 脚 - レッグプレス・マシン系
     case LEG_PRESS = 'leg_press';
+    case HORIZONTAL_LEG_PRESS = 'horizontal_leg_press';
+    case VERTICAL_LEG_PRESS = 'vertical_leg_press';
+    case SINGLE_LEG_PRESS = 'single_leg_press';
+    case LEG_EXTENSION = 'leg_extension';
+    case LEG_CURL = 'leg_curl';
+    case LYING_LEG_CURL = 'lying_leg_curl';
+    case SEATED_LEG_CURL = 'seated_leg_curl';
+    case STANDING_LEG_CURL = 'standing_leg_curl';
+    case GLUTE_HAM_RAISE = 'glute_ham_raise';
+    case REVERSE_HYPEREXTENSION = 'reverse_hyperextension';
+
+    // 脚 - ランジ系
     case LUNGES = 'lunges';
+    case WALKING_LUNGES = 'walking_lunges';
+    case REVERSE_LUNGES = 'reverse_lunges';
+    case LATERAL_LUNGES = 'lateral_lunges';
+    case CURTSY_LUNGES = 'curtsy_lunges';
+    case JUMPING_LUNGES = 'jumping_lunges';
+    case STATIC_LUNGES = 'static_lunges';
+    case STEP_UPS = 'step_ups';
+    case LATERAL_STEP_UPS = 'lateral_step_ups';
+    case BOX_STEP_UPS = 'box_step_ups';
+
+    // 脚 - 臀筋系
+    case HIP_THRUST = 'hip_thrust';
+    case BARBELL_HIP_THRUST = 'barbell_hip_thrust';
+    case SINGLE_LEG_HIP_THRUST = 'single_leg_hip_thrust';
+    case GLUTE_BRIDGE = 'glute_bridge';
+    case SINGLE_LEG_GLUTE_BRIDGE = 'single_leg_glute_bridge';
+    case CABLE_KICKBACK = 'cable_kickback';
+    case DONKEY_KICKS = 'donkey_kicks';
+    case FIRE_HYDRANTS = 'fire_hydrants';
+    case CLAMSHELLS = 'clamshells';
+    case LATERAL_BAND_WALK = 'lateral_band_walk';
+    case MONSTER_WALK = 'monster_walk';
+
+    // 脚 - カーフ系
     case CALF_RAISE = 'calf_raise';
+    case STANDING_CALF_RAISE = 'standing_calf_raise';
+    case SEATED_CALF_RAISE = 'seated_calf_raise';
+    case SINGLE_LEG_CALF_RAISE = 'single_leg_calf_raise';
+    case DONKEY_CALF_RAISE = 'donkey_calf_raise';
+    case LEG_PRESS_CALF_RAISE = 'leg_press_calf_raise';
+    case SMITH_MACHINE_CALF_RAISE = 'smith_machine_calf_raise';
+    case JUMP_ROPE = 'jump_rope';
+    case BOX_JUMPS = 'box_jumps';
+    case DEPTH_JUMPS = 'depth_jumps';
 
     // 体幹
     case PLANK = 'plank';
@@ -134,7 +204,7 @@ enum ExerciseEnum: string
 
     public function getName(): string
     {
-        return match($this) {
+        return match ($this) {
             self::BENCH_PRESS => 'ベンチプレス',
             self::INCLINE_BENCH_PRESS => 'インクラインベンチプレス',
             self::DECLINE_BENCH_PRESS => 'デクラインベンチプレス',
@@ -157,7 +227,7 @@ enum ExerciseEnum: string
             self::WIDE_GRIP_PUSH_UPS => 'ワイドグリッププッシュアップ',
             self::DECLINE_PUSH_UPS => 'デクラインプッシュアップ',
             self::CHEST_FLY => 'チェストフライ',
-            
+
             self::PULL_UPS => '懸垂',
             self::CHIN_UPS => 'チンアップ',
             self::WIDE_GRIP_PULL_UPS => 'ワイドグリップ懸垂',
@@ -184,7 +254,7 @@ enum ExerciseEnum: string
             self::DUMBBELL_REVERSE_FLY => 'ダンベルリバースフライ',
             self::DUMBBELL_DEADLIFT => 'ダンベルデッドリフト',
             self::DEADLIFT => 'デッドリフト',
-            
+
             self::OVERHEAD_PRESS => 'オーバーヘッドプレス',
             self::MILITARY_PRESS => 'ミリタリープレス',
             self::PUSH_PRESS => 'プッシュプレス',
@@ -208,7 +278,7 @@ enum ExerciseEnum: string
             self::PIKE_PUSH_UPS => 'パイクプッシュアップ',
             self::HANDSTAND_PUSH_UPS => '逆立ち腕立て伏せ',
             self::UPRIGHT_ROW => 'アップライトロー',
-            
+
             // 上腕二頭筋
             self::BICEP_CURL => 'バイセップカール',
             self::BARBELL_CURL => 'バーベルカール',
@@ -223,7 +293,7 @@ enum ExerciseEnum: string
             self::ZOTTMAN_CURL => 'ゾットマンカール',
             self::SPIDER_CURL => 'スパイダーカール',
             self::ALTERNATING_DUMBBELL_CURL => 'オルタネイトダンベルカール',
-            
+
             // 上腕三頭筋
             self::TRICEP_DIPS => 'トライセップディップス',
             self::TRICEP_EXTENSION => 'トライセップエクステンション',
@@ -237,7 +307,7 @@ enum ExerciseEnum: string
             self::TRICEP_PRESS_MACHINE => 'トライセッププレスマシン',
             self::BENCH_DIPS => 'ベンチディップス',
             self::SKULL_CRUSHERS => 'スカルクラッシャー',
-            
+
             // 前腕
             self::WRIST_CURL => 'リストカール',
             self::REVERSE_WRIST_CURL => 'リバースリストカール',
@@ -245,14 +315,85 @@ enum ExerciseEnum: string
             self::PLATE_PINCH => 'プレートピンチ',
             self::WRIST_ROLLER => 'リストローラー',
             self::FOREARM_PLANK => 'フォアアームプランク',
-            
+
+            // 脚 - スクワット系
             self::SQUAT => 'スクワット',
             self::FRONT_SQUAT => 'フロントスクワット',
+            self::BACK_SQUAT => 'バックスクワット',
+            self::GOBLET_SQUAT => 'ゴブレットスクワット',
+            self::BULGARIAN_SPLIT_SQUAT => 'ブルガリアンスプリットスクワット',
+            self::PISTOL_SQUAT => 'ピストルスクワット',
+            self::BOX_SQUAT => 'ボックススクワット',
+            self::JUMP_SQUAT => 'ジャンプスクワット',
+            self::HACK_SQUAT => 'ハックスクワット',
+            self::OVERHEAD_SQUAT => 'オーバーヘッドスクワット',
+            self::ZERCHER_SQUAT => 'ゼルチャースクワット',
+            self::SUMO_SQUAT => 'スモウスクワット',
+            self::PAUSE_SQUAT => 'ポーズスクワット',
+            self::SINGLE_LEG_SQUAT => 'シングルレッグスクワット',
+            self::WALL_SIT => 'ウォールシット',
+
+            // 脚 - デッドリフト系
             self::ROMANIAN_DEADLIFT => 'ルーマニアンデッドリフト',
+            self::STIFF_LEG_DEADLIFT => 'スティッフレッグデッドリフト',
+            self::SUMO_DEADLIFT => 'スモウデッドリフト',
+            self::TRAP_BAR_DEADLIFT => 'トラップバーデッドリフト',
+            self::SINGLE_LEG_DEADLIFT => 'シングルレッグデッドリフト',
+            self::DEFICIT_DEADLIFT => 'デフィシットデッドリフト',
+            self::RACK_PULLS => 'ラックプル',
+            self::GOOD_MORNING => 'グッドモーニング',
+            self::NORDIC_CURL => 'ノルディックカール',
+
+            // 脚 - レッグプレス・マシン系
             self::LEG_PRESS => 'レッグプレス',
+            self::HORIZONTAL_LEG_PRESS => 'ホリゾンタルレッグプレス',
+            self::VERTICAL_LEG_PRESS => 'バーティカルレッグプレス',
+            self::SINGLE_LEG_PRESS => 'シングルレッグプレス',
+            self::LEG_EXTENSION => 'レッグエクステンション',
+            self::LEG_CURL => 'レッグカール',
+            self::LYING_LEG_CURL => 'ライイングレッグカール',
+            self::SEATED_LEG_CURL => 'シーテッドレッグカール',
+            self::STANDING_LEG_CURL => 'スタンディングレッグカール',
+            self::GLUTE_HAM_RAISE => 'グルートハムレイズ',
+            self::REVERSE_HYPEREXTENSION => 'リバースハイパーエクステンション',
+
+            // 脚 - ランジ系
             self::LUNGES => 'ランジ',
+            self::WALKING_LUNGES => 'ウォーキングランジ',
+            self::REVERSE_LUNGES => 'リバースランジ',
+            self::LATERAL_LUNGES => 'ラテラルランジ',
+            self::CURTSY_LUNGES => 'カーツィーランジ',
+            self::JUMPING_LUNGES => 'ジャンピングランジ',
+            self::STATIC_LUNGES => 'スタティックランジ',
+            self::STEP_UPS => 'ステップアップ',
+            self::LATERAL_STEP_UPS => 'ラテラルステップアップ',
+            self::BOX_STEP_UPS => 'ボックスステップアップ',
+
+            // 脚 - 臀筋系
+            self::HIP_THRUST => 'ヒップスラスト',
+            self::BARBELL_HIP_THRUST => 'バーベルヒップスラスト',
+            self::SINGLE_LEG_HIP_THRUST => 'シングルレッグヒップスラスト',
+            self::GLUTE_BRIDGE => 'グルートブリッジ',
+            self::SINGLE_LEG_GLUTE_BRIDGE => 'シングルレッググルートブリッジ',
+            self::CABLE_KICKBACK => 'ケーブルキックバック',
+            self::DONKEY_KICKS => 'ドンキーキック',
+            self::FIRE_HYDRANTS => 'ファイヤーハイドラント',
+            self::CLAMSHELLS => 'クラムシェル',
+            self::LATERAL_BAND_WALK => 'ラテラルバンドウォーク',
+            self::MONSTER_WALK => 'モンスターウォーク',
+
+            // 脚 - カーフ系
             self::CALF_RAISE => 'カーフレイズ',
-            
+            self::STANDING_CALF_RAISE => 'スタンディングカーフレイズ',
+            self::SEATED_CALF_RAISE => 'シーテッドカーフレイズ',
+            self::SINGLE_LEG_CALF_RAISE => 'シングルレッグカーフレイズ',
+            self::DONKEY_CALF_RAISE => 'ドンキーカーフレイズ',
+            self::LEG_PRESS_CALF_RAISE => 'レッグプレスカーフレイズ',
+            self::SMITH_MACHINE_CALF_RAISE => 'スミスマシンカーフレイズ',
+            self::JUMP_ROPE => '縄跳び',
+            self::BOX_JUMPS => 'ボックスジャンプ',
+            self::DEPTH_JUMPS => 'デプスジャンプ',
+
             self::PLANK => 'プランク',
             self::CRUNCHES => 'クランチ',
             self::RUSSIAN_TWIST => 'ロシアンツイスト',
@@ -262,7 +403,7 @@ enum ExerciseEnum: string
 
     public function getDescription(): string
     {
-        return match($this) {
+        return match ($this) {
             self::BENCH_PRESS => 'バーベルを使った基本的な胸筋トレーニング',
             self::INCLINE_BENCH_PRESS => '上部胸筋を重点的に鍛えるベンチプレス',
             self::DECLINE_BENCH_PRESS => '下部胸筋を重点的に鍛えるベンチプレス',
@@ -285,7 +426,7 @@ enum ExerciseEnum: string
             self::WIDE_GRIP_PUSH_UPS => '広い手幅で行う胸筋外側のトレーニング',
             self::DECLINE_PUSH_UPS => '足を高くして行う上部胸筋のトレーニング',
             self::CHEST_FLY => '胸筋の分離を重視したトレーニング',
-            
+
             self::PULL_UPS => '上半身の引く力を鍛える自重トレーニング',
             self::CHIN_UPS => '手のひらを手前に向けて行う懸垂',
             self::WIDE_GRIP_PULL_UPS => '広い手幅で行う広背筋重視の懸垂',
@@ -312,7 +453,7 @@ enum ExerciseEnum: string
             self::DUMBBELL_REVERSE_FLY => 'ダンベルを使ったリバースフライ',
             self::DUMBBELL_DEADLIFT => 'ダンベルを使ったデッドリフト',
             self::DEADLIFT => '全身を使った代表的なコンパウンド種目',
-            
+
             self::OVERHEAD_PRESS => '肩全体を鍛える基本種目',
             self::MILITARY_PRESS => '厳格なフォームで行うプレス種目',
             self::PUSH_PRESS => '下半身の反動を使ったプレス種目',
@@ -336,7 +477,7 @@ enum ExerciseEnum: string
             self::PIKE_PUSH_UPS => '逆V字姿勢で行う肩の自重トレーニング',
             self::HANDSTAND_PUSH_UPS => '逆立ち状態で行う高強度肩トレーニング',
             self::UPRIGHT_ROW => '肩と僧帽筋を鍛える種目',
-            
+
             // 上腕二頭筋
             self::BICEP_CURL => '上腕二頭筋の基本種目',
             self::BARBELL_CURL => 'バーベルを使った上腕二頭筋トレーニング',
@@ -351,7 +492,7 @@ enum ExerciseEnum: string
             self::ZOTTMAN_CURL => '上げと下げでグリップを変えるカール',
             self::SPIDER_CURL => 'ベンチに胸を付けて行うカール',
             self::ALTERNATING_DUMBBELL_CURL => '左右交互に行うダンベルカール',
-            
+
             // 上腕三頭筋
             self::TRICEP_DIPS => '上腕三頭筋の自重トレーニング',
             self::TRICEP_EXTENSION => '上腕三頭筋の分離種目',
@@ -365,7 +506,7 @@ enum ExerciseEnum: string
             self::TRICEP_PRESS_MACHINE => 'マシンを使った上腕三頭筋トレーニング',
             self::BENCH_DIPS => 'ベンチを使った上腕三頭筋ディップス',
             self::SKULL_CRUSHERS => '額に向けて下ろす上腕三頭筋種目',
-            
+
             // 前腕
             self::WRIST_CURL => '手首の屈曲で前腕屈筋群を鍛える',
             self::REVERSE_WRIST_CURL => '手首の伸展で前腕伸筋群を鍛える',
@@ -373,14 +514,85 @@ enum ExerciseEnum: string
             self::PLATE_PINCH => 'プレートを指で挟んで握力を鍛える',
             self::WRIST_ROLLER => 'ローラーで前腕全体を鍛える',
             self::FOREARM_PLANK => '前腕で支えるプランク',
-            
+
+            // 脚 - スクワット系
             self::SQUAT => '下半身の王道トレーニング',
             self::FRONT_SQUAT => '大腿四頭筋を重点的に鍛えるスクワット',
+            self::BACK_SQUAT => 'バーベルを背中に担いで行うスクワット',
+            self::GOBLET_SQUAT => 'ケトルベルやダンベルを胸前に持つスクワット',
+            self::BULGARIAN_SPLIT_SQUAT => '後ろ足を台に乗せて行う片脚スクワット',
+            self::PISTOL_SQUAT => '片脚で行う高難度スクワット',
+            self::BOX_SQUAT => 'ボックスに座ってから立ち上がるスクワット',
+            self::JUMP_SQUAT => 'ジャンプを組み込んだ爆発的なスクワット',
+            self::HACK_SQUAT => 'マシンを使った安全なスクワット',
+            self::OVERHEAD_SQUAT => 'バーベルを頭上に保持するスクワット',
+            self::ZERCHER_SQUAT => 'バーベルを肘に乗せて行うスクワット',
+            self::SUMO_SQUAT => '足幅を広くとる内転筋重視のスクワット',
+            self::PAUSE_SQUAT => 'ボトムで一時停止するスクワット',
+            self::SINGLE_LEG_SQUAT => '片脚で行うバランス重視のスクワット',
+            self::WALL_SIT => '壁に背中をつけて空気椅子の姿勢を保持',
+
+            // 脚 - デッドリフト系
             self::ROMANIAN_DEADLIFT => 'ハムストリングと臀筋を鍛える種目',
+            self::STIFF_LEG_DEADLIFT => '膝をほぼ伸ばしたまま行うデッドリフト',
+            self::SUMO_DEADLIFT => '足幅を広くとるデッドリフト',
+            self::TRAP_BAR_DEADLIFT => 'トラップバーを使った腰に優しいデッドリフト',
+            self::SINGLE_LEG_DEADLIFT => '片脚で行うバランス重視のデッドリフト',
+            self::DEFICIT_DEADLIFT => '台の上から行う可動域の広いデッドリフト',
+            self::RACK_PULLS => 'ラックから引き上げる部分的デッドリフト',
+            self::GOOD_MORNING => 'バーベルを担いで前傾する背中とハムストリングの種目',
+            self::NORDIC_CURL => '膝を固定して体を前後に動かすハムストリング種目',
+
+            // 脚 - レッグプレス・マシン系
             self::LEG_PRESS => 'マシンを使った下半身トレーニング',
+            self::HORIZONTAL_LEG_PRESS => '水平方向に押すレッグプレス',
+            self::VERTICAL_LEG_PRESS => '垂直方向に押すレッグプレス',
+            self::SINGLE_LEG_PRESS => '片脚で行うレッグプレス',
+            self::LEG_EXTENSION => '大腿四頭筋を集中的に鍛えるマシン種目',
+            self::LEG_CURL => 'ハムストリングを集中的に鍛えるマシン種目',
+            self::LYING_LEG_CURL => 'うつ伏せで行うレッグカール',
+            self::SEATED_LEG_CURL => '座って行うレッグカール',
+            self::STANDING_LEG_CURL => '立って行うレッグカール',
+            self::GLUTE_HAM_RAISE => '臀筋とハムストリングを同時に鍛える種目',
+            self::REVERSE_HYPEREXTENSION => '逆向きで行う臀筋と背中の種目',
+
+            // 脚 - ランジ系
             self::LUNGES => '片脚ずつ行う下半身トレーニング',
+            self::WALKING_LUNGES => '歩きながら行うランジ',
+            self::REVERSE_LUNGES => '後ろに脚を出すランジ',
+            self::LATERAL_LUNGES => '横方向に脚を出すランジ',
+            self::CURTSY_LUNGES => '脚を後ろでクロスさせるランジ',
+            self::JUMPING_LUNGES => 'ジャンプして脚を入れ替えるランジ',
+            self::STATIC_LUNGES => 'その場で固定して行うランジ',
+            self::STEP_UPS => '台に昇り降りする下半身トレーニング',
+            self::LATERAL_STEP_UPS => '横向きに台に昇るステップアップ',
+            self::BOX_STEP_UPS => 'ボックスを使った高強度ステップアップ',
+
+            // 脚 - 臀筋系
+            self::HIP_THRUST => '臀筋を集中的に鍛える基本種目',
+            self::BARBELL_HIP_THRUST => 'バーベルを使ったヒップスラスト',
+            self::SINGLE_LEG_HIP_THRUST => '片脚で行うヒップスラスト',
+            self::GLUTE_BRIDGE => '仰向けで行う臀筋トレーニング',
+            self::SINGLE_LEG_GLUTE_BRIDGE => '片脚で行うグルートブリッジ',
+            self::CABLE_KICKBACK => 'ケーブルで脚を後ろに蹴り上げる臀筋種目',
+            self::DONKEY_KICKS => '四つん這いで脚を蹴り上げる臀筋種目',
+            self::FIRE_HYDRANTS => '四つん這いで脚を横に上げる臀筋種目',
+            self::CLAMSHELLS => '横向きに寝て膝を開く臀筋種目',
+            self::LATERAL_BAND_WALK => 'バンドを使って横歩きする臀筋種目',
+            self::MONSTER_WALK => 'バンドを使って前後に歩く臀筋種目',
+
+            // 脚 - カーフ系
             self::CALF_RAISE => 'ふくらはぎを鍛える種目',
-            
+            self::STANDING_CALF_RAISE => '立って行うカーフレイズ',
+            self::SEATED_CALF_RAISE => '座って行うカーフレイズ',
+            self::SINGLE_LEG_CALF_RAISE => '片脚で行うカーフレイズ',
+            self::DONKEY_CALF_RAISE => '前傾姿勢で行うカーフレイズ',
+            self::LEG_PRESS_CALF_RAISE => 'レッグプレスマシンで行うカーフレイズ',
+            self::SMITH_MACHINE_CALF_RAISE => 'スミスマシンで行うカーフレイズ',
+            self::JUMP_ROPE => 'ふくらはぎと心肺機能を鍛える有酸素運動',
+            self::BOX_JUMPS => '爆発的な下半身パワーを鍛えるジャンプ種目',
+            self::DEPTH_JUMPS => '高い所から飛び降りてジャンプする上級種目',
+
             self::PLANK => '体幹全体を鍛える基本種目',
             self::CRUNCHES => '腹筋の基本種目',
             self::RUSSIAN_TWIST => '腹斜筋を鍛える回転運動',
@@ -390,25 +602,25 @@ enum ExerciseEnum: string
 
     public function getPrimaryMuscles(): array
     {
-        return match($this) {
+        return match ($this) {
             self::BENCH_PRESS, self::INCLINE_BENCH_PRESS, self::DECLINE_BENCH_PRESS,
             self::DUMBBELL_PRESS, self::INCLINE_DUMBBELL_PRESS, self::DECLINE_DUMBBELL_PRESS,
             self::DUMBBELL_FLY, self::INCLINE_DUMBBELL_FLY, self::CHEST_PRESS_MACHINE,
             self::PEC_DECK_FLY, self::CABLE_CROSSOVER, self::CABLE_FLY_HIGH,
             self::CABLE_FLY_MID, self::CABLE_FLY_LOW, self::PUSH_UPS,
             self::WIDE_GRIP_PUSH_UPS, self::DECLINE_PUSH_UPS, self::CHEST_FLY => [MuscleEnum::PECTORALIS_MAJOR],
-            
+
             self::CLOSE_GRIP_BENCH_PRESS, self::DIAMOND_PUSH_UPS => [MuscleEnum::PECTORALIS_MAJOR], // 上腕三頭筋も主働筋だが現在未定義
             self::DIPS => [MuscleEnum::PECTORALIS_MAJOR], // 下部胸筋と上腕三頭筋
             self::DUMBBELL_PULLOVER => [MuscleEnum::PECTORALIS_MAJOR, MuscleEnum::LATISSIMUS_DORSI],
-            
+
             // 背中 - 懸垂系（自重）
             self::PULL_UPS, self::WIDE_GRIP_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
             self::CHIN_UPS => [MuscleEnum::LATISSIMUS_DORSI], // 上腕二頭筋も関与するが現在未定義
             self::NEUTRAL_GRIP_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
             self::ASSISTED_PULL_UPS => [MuscleEnum::LATISSIMUS_DORSI],
             self::INVERTED_ROWS => [MuscleEnum::RHOMBOIDS, MuscleEnum::LATISSIMUS_DORSI],
-            
+
             // 背中 - マシン・ケーブル系
             self::LAT_PULLDOWN, self::WIDE_GRIP_LAT_PULLDOWN, self::CLOSE_GRIP_LAT_PULLDOWN,
             self::REVERSE_GRIP_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
@@ -416,39 +628,39 @@ enum ExerciseEnum: string
             self::FACE_PULLS => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
             self::CABLE_REVERSE_FLY => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
             self::STRAIGHT_ARM_PULLDOWN => [MuscleEnum::LATISSIMUS_DORSI],
-            
+
             // 背中 - バーベル系
             self::BARBELL_ROW, self::BENT_OVER_BARBELL_ROW, self::UNDERHAND_BARBELL_ROW,
             self::T_BAR_ROW, self::PENDLAY_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
-            
+
             // 背中 - ダンベル系
             self::DUMBBELL_ROW, self::SINGLE_ARM_DUMBBELL_ROW, self::CHEST_SUPPORTED_DUMBBELL_ROW,
             self::INCLINE_DUMBBELL_ROW => [MuscleEnum::LATISSIMUS_DORSI, MuscleEnum::RHOMBOIDS],
             self::DUMBBELL_REVERSE_FLY => [MuscleEnum::POSTERIOR_DELTOID, MuscleEnum::RHOMBOIDS],
             self::DUMBBELL_DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::LATISSIMUS_DORSI],
-            
+
             self::DEADLIFT => [MuscleEnum::ERECTOR_SPINAE, MuscleEnum::GLUTES, MuscleEnum::HAMSTRINGS],
-            
+
             // 肩 - プレス系
             self::OVERHEAD_PRESS, self::MILITARY_PRESS, self::DUMBBELL_SHOULDER_PRESS,
             self::SHOULDER_PRESS_MACHINE => [MuscleEnum::ANTERIOR_DELTOID],
             self::PUSH_PRESS => [MuscleEnum::ANTERIOR_DELTOID], // 下半身も関与するがメインは肩
             self::BEHIND_NECK_PRESS => [MuscleEnum::ANTERIOR_DELTOID], // 危険な種目だが一応
             self::DUMBBELL_ARNOLD_PRESS => [MuscleEnum::ANTERIOR_DELTOID, MuscleEnum::LATERAL_DELTOID],
-            
+
             // 肩 - レイズ系
             self::LATERAL_RAISE, self::CABLE_LATERAL_RAISE, self::LATERAL_RAISE_MACHINE => [MuscleEnum::LATERAL_DELTOID],
             self::FRONT_RAISE, self::CABLE_FRONT_RAISE => [MuscleEnum::ANTERIOR_DELTOID],
             self::REAR_DELT_FLY, self::CABLE_REAR_DELT_FLY, self::REVERSE_FLY_MACHINE => [MuscleEnum::POSTERIOR_DELTOID],
-            
+
             // 肩 - アップライトロー・シュラッグ系
             self::UPRIGHT_ROW, self::BARBELL_UPRIGHT_ROW, self::DUMBBELL_UPRIGHT_ROW,
             self::CABLE_UPRIGHT_ROW => [MuscleEnum::LATERAL_DELTOID, MuscleEnum::TRAPEZIUS],
             self::BARBELL_SHRUGS, self::DUMBBELL_SHRUGS => [MuscleEnum::TRAPEZIUS],
-            
+
             // 肩 - 自重系
             self::PIKE_PUSH_UPS, self::HANDSTAND_PUSH_UPS => [MuscleEnum::ANTERIOR_DELTOID],
-            
+
             // 腕 - 上腕二頭筋系
             self::BICEP_CURL, self::BARBELL_CURL, self::EZ_BAR_CURL, self::DUMBBELL_CURL,
             self::CONCENTRATION_CURL, self::PREACHER_CURL, self::INCLINE_DUMBBELL_CURL,
@@ -456,25 +668,25 @@ enum ExerciseEnum: string
             self::HAMMER_CURL => [MuscleEnum::BICEPS_BRACHII, MuscleEnum::BRACHIALIS, MuscleEnum::BRACHIORADIALIS],
             self::REVERSE_CURL => [MuscleEnum::BRACHIALIS, MuscleEnum::BRACHIORADIALIS],
             self::ZOTTMAN_CURL => [MuscleEnum::BICEPS_BRACHII, MuscleEnum::BRACHIORADIALIS],
-            
+
             // 腕 - 上腕三頭筋系
             self::TRICEP_DIPS, self::TRICEP_EXTENSION, self::CLOSE_GRIP_PUSH_UPS,
             self::OVERHEAD_TRICEP_EXTENSION, self::LYING_TRICEP_EXTENSION, self::TRICEP_KICKBACK,
             self::DIAMOND_PUSH_UPS_TRICEP, self::CABLE_TRICEP_PUSHDOWN, self::ROPE_TRICEP_PUSHDOWN,
             self::TRICEP_PRESS_MACHINE, self::BENCH_DIPS, self::SKULL_CRUSHERS => [MuscleEnum::TRICEPS_BRACHII],
-            
+
             // 腕 - 前腕系
             self::WRIST_CURL => [MuscleEnum::FOREARM_FLEXORS],
             self::REVERSE_WRIST_CURL => [MuscleEnum::FOREARM_EXTENSORS],
             self::FARMER_WALK, self::PLATE_PINCH => [MuscleEnum::FOREARM_FLEXORS, MuscleEnum::FOREARM_EXTENSORS],
             self::WRIST_ROLLER => [MuscleEnum::FOREARM_FLEXORS, MuscleEnum::FOREARM_EXTENSORS],
             self::FOREARM_PLANK => [MuscleEnum::FOREARM_FLEXORS],
-            
+
             self::SQUAT, self::FRONT_SQUAT, self::LEG_PRESS => [MuscleEnum::QUADRICEPS, MuscleEnum::GLUTES],
             self::ROMANIAN_DEADLIFT => [MuscleEnum::HAMSTRINGS, MuscleEnum::GLUTES],
             self::LUNGES => [MuscleEnum::QUADRICEPS, MuscleEnum::GLUTES],
             self::CALF_RAISE => [MuscleEnum::CALVES],
-            
+
             self::PLANK => [MuscleEnum::RECTUS_ABDOMINIS, MuscleEnum::ERECTOR_SPINAE],
             self::CRUNCHES => [MuscleEnum::RECTUS_ABDOMINIS],
             self::RUSSIAN_TWIST => [MuscleEnum::OBLIQUES],
@@ -486,14 +698,14 @@ enum ExerciseEnum: string
     {
         $primaryMuscles = $this->getPrimaryMuscles();
         $categories = [];
-        
+
         foreach ($primaryMuscles as $muscle) {
             $category = $muscle->getMuscleGroupCategory();
-            if (!in_array($category, $categories)) {
+            if (! in_array($category, $categories)) {
                 $categories[] = $category;
             }
         }
-        
+
         return $categories;
     }
 

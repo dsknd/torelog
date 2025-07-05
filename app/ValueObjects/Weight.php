@@ -58,10 +58,10 @@ readonly class Weight
     public function toKg(): self
     {
         static $kgUnit = null;
-        
+
         if ($kgUnit === null) {
             $kgUnit = WeightUnit::where('symbol', 'kg')->first();
-            if (!$kgUnit) {
+            if (! $kgUnit) {
                 throw new InvalidArgumentException('Kg weight unit not found');
             }
         }
@@ -73,7 +73,7 @@ readonly class Weight
     {
         $thisInKg = $this->toKg();
         $otherInKg = $other->toKg();
-        
+
         return abs($thisInKg->value - $otherInKg->value) < 0.001; // 0.001kg precision
     }
 

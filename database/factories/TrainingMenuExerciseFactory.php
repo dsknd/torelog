@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\TrainingMenuExercise;
-use App\Models\TrainingMenu;
 use App\Models\Exercise;
+use App\Models\TrainingMenu;
+use App\Models\TrainingMenuExercise;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

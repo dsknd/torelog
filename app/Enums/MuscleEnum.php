@@ -46,7 +46,7 @@ enum MuscleEnum: string
 
     public function getName(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PECTORALIS_MAJOR => 'Pectoralis Major',
             self::PECTORALIS_MINOR => 'Pectoralis Minor',
             self::SERRATUS_ANTERIOR => 'Serratus Anterior',
@@ -80,7 +80,7 @@ enum MuscleEnum: string
 
     public function getDescription(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PECTORALIS_MAJOR => '大胸筋 - 胸部の主要な筋肉',
             self::PECTORALIS_MINOR => '小胸筋 - 胸部の深層筋',
             self::SERRATUS_ANTERIOR => '前鋸筋 - 胸部側面の筋肉',
@@ -114,7 +114,7 @@ enum MuscleEnum: string
 
     public function getMuscleGroupCategory(): MuscleGroupCategoryEnum
     {
-        return match($this) {
+        return match ($this) {
             self::PECTORALIS_MAJOR, self::PECTORALIS_MINOR, self::SERRATUS_ANTERIOR => MuscleGroupCategoryEnum::CHEST,
             self::LATISSIMUS_DORSI, self::RHOMBOIDS, self::ERECTOR_SPINAE,
             self::TERES_MAJOR, self::TERES_MINOR, self::INFRASPINATUS => MuscleGroupCategoryEnum::BACK,
@@ -140,7 +140,7 @@ enum MuscleEnum: string
     {
         return array_filter(
             self::cases(),
-            fn($muscle) => $muscle->getMuscleGroupCategory() === $category
+            fn ($muscle) => $muscle->getMuscleGroupCategory() === $category
         );
     }
 }

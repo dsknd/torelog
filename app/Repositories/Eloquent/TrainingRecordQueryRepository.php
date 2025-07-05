@@ -13,7 +13,7 @@ class TrainingRecordQueryRepository implements TrainingRecordQueryRepositoryInte
         return TrainingRecord::with(['user', 'trainingMenu', 'exerciseLogs.exercise', 'exerciseLogs.weightUnit'])
             ->find($id);
     }
-    
+
     public function findByUserId(int $userId): Collection
     {
         return TrainingRecord::with(['trainingMenu', 'exerciseLogs.exercise'])
@@ -21,7 +21,7 @@ class TrainingRecordQueryRepository implements TrainingRecordQueryRepositoryInte
             ->orderBy('date', 'desc')
             ->get();
     }
-    
+
     public function findByUserIdAndDate(int $userId, string $date): Collection
     {
         return TrainingRecord::with(['trainingMenu', 'exerciseLogs.exercise', 'exerciseLogs.weightUnit'])
@@ -29,7 +29,7 @@ class TrainingRecordQueryRepository implements TrainingRecordQueryRepositoryInte
             ->whereDate('date', $date)
             ->get();
     }
-    
+
     public function findByUserIdWithDateRange(int $userId, string $startDate, string $endDate): Collection
     {
         return TrainingRecord::with(['trainingMenu', 'exerciseLogs.exercise'])

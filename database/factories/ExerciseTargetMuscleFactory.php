@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\ExerciseTargetMuscle;
 use App\Models\Exercise;
+use App\Models\ExerciseTargetMuscle;
 use App\Models\Muscle;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

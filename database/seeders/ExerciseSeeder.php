@@ -22,10 +22,10 @@ class ExerciseSeeder extends Seeder
             $primaryMuscles = $exerciseEnum->getPrimaryMuscles();
             foreach ($primaryMuscles as $muscleEnum) {
                 $muscle = Muscle::where('name', $muscleEnum->getName())->first();
-                
+
                 if ($muscle) {
                     $exercise->muscles()->syncWithoutDetaching([
-                        $muscle->id => ['is_primary' => true]
+                        $muscle->id => ['is_primary' => true],
                     ]);
                 }
             }
@@ -34,7 +34,7 @@ class ExerciseSeeder extends Seeder
             $categories = $exerciseEnum->getMuscleGroupCategories();
             foreach ($categories as $categoryEnum) {
                 $category = MuscleGroupCategory::where('name', $categoryEnum->getName())->first();
-                
+
                 if ($category) {
                     $exercise->muscleGroupCategories()->syncWithoutDetaching($category->id);
                 }

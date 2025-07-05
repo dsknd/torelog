@@ -13,7 +13,7 @@ enum MuscleGroupCategoryEnum: string
 
     public function getName(): string
     {
-        return match($this) {
+        return match ($this) {
             self::CHEST => 'Chest',
             self::BACK => 'Back',
             self::LEGS => 'Legs',
@@ -25,7 +25,7 @@ enum MuscleGroupCategoryEnum: string
 
     public function getDescription(): string
     {
-        return match($this) {
+        return match ($this) {
             self::CHEST => '胸部の筋肉群',
             self::BACK => '背中の筋肉群',
             self::LEGS => '脚部の筋肉群',
@@ -45,6 +45,6 @@ enum MuscleGroupCategoryEnum: string
 
     public static function getAllCategories(): array
     {
-        return array_map(fn($case) => $case->toArray(), self::cases());
+        return array_map(fn ($case) => $case->toArray(), self::cases());
     }
 }

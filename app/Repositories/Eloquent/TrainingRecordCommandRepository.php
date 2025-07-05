@@ -11,19 +11,19 @@ class TrainingRecordCommandRepository implements TrainingRecordCommandRepository
     {
         return TrainingRecord::create($data);
     }
-    
+
     public function update(int $id, array $data): TrainingRecord
     {
         $trainingRecord = TrainingRecord::findOrFail($id);
         $trainingRecord->update($data);
-        
+
         return $trainingRecord->fresh();
     }
-    
+
     public function delete(int $id): bool
     {
         $trainingRecord = TrainingRecord::findOrFail($id);
-        
+
         return $trainingRecord->delete();
     }
 }

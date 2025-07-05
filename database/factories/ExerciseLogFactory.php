@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Exercise;
 use App\Models\ExerciseLog;
 use App\Models\TrainingRecord;
-use App\Models\Exercise;
 use App\Models\WeightUnit;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

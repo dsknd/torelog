@@ -12,24 +12,24 @@ class TrainingMenuQueryRepository implements TrainingMenuQueryRepositoryInterfac
     {
         return TrainingMenu::with([
             'user',
-            'exercises.muscleGroupCategories'
+            'exercises.muscleGroupCategories',
         ])->find($id);
     }
-    
+
     public function findByUserId(int $userId): Collection
     {
         return TrainingMenu::where('user_id', $userId)
             ->orderBy('name')
             ->get();
     }
-    
+
     public function findByUserIdWithExercises(int $userId): Collection
     {
         return TrainingMenu::with([
-            'exercises.muscleGroupCategories'
+            'exercises.muscleGroupCategories',
         ])
-        ->where('user_id', $userId)
-        ->orderBy('name')
-        ->get();
+            ->where('user_id', $userId)
+            ->orderBy('name')
+            ->get();
     }
 }
