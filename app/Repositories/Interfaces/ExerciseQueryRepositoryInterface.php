@@ -16,4 +16,6 @@ interface ExerciseQueryRepositoryInterface
     public function findByMuscleId(int $muscleId): Collection;
 
     public function searchByName(string $name): Collection;
+
+    public function search(array $params): array;
 }

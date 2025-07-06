@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\UseCases\Exercise\SearchExercise\SearchExerciseUseCase;
+use App\UseCases\Exercise\SearchExercise\SearchExerciseUseCaseInterface;
 use App\UseCases\TrainingRecord\CreateTrainingRecord\CreateTrainingRecordUseCase;
 use App\UseCases\TrainingRecord\CreateTrainingRecord\CreateTrainingRecordUseCaseInterface;
 use Illuminate\Support\ServiceProvider;
@@ -16,6 +18,11 @@ class UseCaseServiceProvider extends ServiceProvider
         $this->app->bind(
             CreateTrainingRecordUseCaseInterface::class,
             CreateTrainingRecordUseCase::class
+        );
+        
+        $this->app->bind(
+            SearchExerciseUseCaseInterface::class,
+            SearchExerciseUseCase::class
         );
     }
 
