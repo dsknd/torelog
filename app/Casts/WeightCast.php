@@ -72,6 +72,14 @@ class WeightCast implements CastsAttributes
             ];
         }
 
-        throw new \InvalidArgumentException('Weight cast expects Weight instance or array with value and unit_id');
+        if (is_numeric($value)) {
+            // For factories/seeding, just store the raw value
+            // weight_unit_id should be set separately
+            return [
+                $key => (float) $value,
+            ];
+        }
+
+        throw new \InvalidArgumentException('Weight cast expects Weight instance, array with value and unit_id, or numeric value');
     }
 }

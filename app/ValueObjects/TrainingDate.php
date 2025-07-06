@@ -13,21 +13,21 @@ readonly class TrainingDate
     {
         if (is_string($date)) {
             try {
-                $this->date = Carbon::parse($date);
+                $parsedDate = Carbon::parse($date);
             } catch (\Exception $e) {
                 throw new InvalidArgumentException("Invalid date format: {$date}");
             }
         } else {
-            $this->date = $date->copy();
+            $parsedDate = $date->copy();
         }
 
         // Ensure the date is not in the future
-        if ($this->date->isFuture()) {
+        if ($parsedDate->isFuture()) {
             throw new InvalidArgumentException('Training date cannot be in the future');
         }
 
         // Set time to beginning of day for consistency
-        $this->date = $this->date->startOfDay();
+        $this->date = $parsedDate->startOfDay();
     }
 
     public static function today(): self

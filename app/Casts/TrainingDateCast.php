@@ -46,6 +46,10 @@ class TrainingDateCast implements CastsAttributes
             return (new TrainingDate($value))->format('Y-m-d');
         }
 
-        throw new \InvalidArgumentException('TrainingDate cast expects TrainingDate instance, Carbon instance, or date string');
+        if ($value instanceof \DateTime) {
+            return (new TrainingDate(Carbon::instance($value)))->format('Y-m-d');
+        }
+
+        throw new \InvalidArgumentException('TrainingDate cast expects TrainingDate instance, Carbon instance, DateTime instance, or date string');
     }
 }
