@@ -2,20 +2,14 @@
 
 namespace App\Enums;
 
+use App\Enums\Concerns\HasBasicMethods;
+
 enum WeightUnitEnum: string
 {
+    use HasBasicMethods;
     case KILOGRAM = 'kg';
     case POUND = 'lb';
     case GRAM = 'g';
-
-    public function getName(): string
-    {
-        return match ($this) {
-            self::KILOGRAM => 'キログラム',
-            self::POUND => 'ポンド',
-            self::GRAM => 'グラム',
-        };
-    }
 
     public function getSymbol(): string
     {
@@ -31,15 +25,11 @@ enum WeightUnitEnum: string
         };
     }
 
-    public static function getDefault(): self
-    {
-        return self::KILOGRAM;
-    }
-
     public function toArray(): array
     {
         return [
             'name' => $this->getName(),
+            'value' => $this->value,
             'symbol' => $this->getSymbol(),
             'conversion_rate' => $this->getConversionRate(),
         ];

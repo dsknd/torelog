@@ -13,7 +13,10 @@ class MuscleGroupCategorySeeder extends Seeder
         foreach (MuscleGroupCategoryEnum::cases() as $category) {
             MuscleGroupCategory::updateOrCreate(
                 ['name' => $category->getName()],
-                $category->toArray()
+                [
+                    'name' => $category->getName(),
+                    'description' => null,
+                ]
             );
         }
     }

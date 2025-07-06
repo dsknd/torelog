@@ -15,7 +15,10 @@ class ExerciseSeeder extends Seeder
         foreach (ExerciseEnum::cases() as $exerciseEnum) {
             $exercise = Exercise::updateOrCreate(
                 ['name' => $exerciseEnum->getName()],
-                $exerciseEnum->toArray()
+                [
+                    'name' => $exerciseEnum->getName(),
+                    'description' => null,
+                ]
             );
 
             // 主要筋肉との関連付け

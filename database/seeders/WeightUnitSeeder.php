@@ -13,7 +13,11 @@ class WeightUnitSeeder extends Seeder
         foreach (WeightUnitEnum::cases() as $weightUnit) {
             WeightUnit::updateOrCreate(
                 ['symbol' => $weightUnit->getSymbol()],
-                $weightUnit->toArray()
+                [
+                    'name' => $weightUnit->getName(),
+                    'symbol' => $weightUnit->getSymbol(),
+                    'conversion_rate' => $weightUnit->getConversionRate(),
+                ]
             );
         }
     }
